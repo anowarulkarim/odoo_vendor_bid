@@ -1,961 +1,301 @@
 <xaiArtifact artifact_id="994d6b1a-44e2-4b25-a6db-65d58ed7a19f" artifact_version_id="d7078a22-8996-433a-8c03-9a8b1a540fe8" title="Vendor Bid Odoo 18 Landing Page" contentType="text/html">
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
-    <title>Vendor Bid - Odoo Apps Store</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Poppins', Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-            background-color: #f8f9fa;
-        }
-        .oe_container {
-            padding: 60px 0;
-            text-align: center;
-            background-color: #ffffff;
-        }
-        .oe_row {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-        }
-        .oe_spaced {
-            margin-bottom: 30px;
-        }
-        .oe_slogan {
-            margin-bottom: 20px;
-            color: #875A7B;
-        }
-        .oe_slogan:first-child {
-            font-size: 32px;
-            font-weight: 700;
-        }
-        .oe_slogan:nth-child(2) {
-            font-size: 20px;
-            font-weight: 400;
-            color: #333;
-        }
-        .oe_span6 {
-            width: 50%;
-            padding: 20px;
-            box-sizing: border-box;
-        }
-        .oe_picture.oe_screenshot {
-            width: 100%;
-            max-width: 80%; /* Relative to container */
-            height: auto;
-            margin: 0 auto;
-            display: block;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        }
-        .oe_mt32 {
-            margin-top: 32px;
-        }
-        .oe_mb32 {
-            margin-bottom: 32px;
-        }
-        .text-justify {
-            text-align: justify;
-        }
-        .oe_dark {
-            background-color: #f5f5f5;
-        }
-        ul, ol {
-            margin: 0 0 20px 20px;
-            text-align: left;
-            list-style-position: outside;
-        }
-        li {
-            margin-bottom: 12px;
-            color: #444;
-        }
-        a {
-            color: #875A7B;
-            text-decoration: none;
-            font-weight: 600;
-            transition: color 0.2s;
-        }
-        a:hover {
-            color: #5e3c58;
-            text-decoration: underline;
-        }
-        .btn {
-            display: inline-block;
-            padding: 12px 24px;
-            background-color: #875A7B;
-            color: #ffffff;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: background-color 0.2s;
-        }
-        .btn:hover {
-            background-color: #5e3c58;
-            color: #ffffff;
-        }
-        .dashboard-menu {
-            margin-bottom: 30px;
-            text-align: center;
-            background-color: #ffffff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        }
-        .dashboard-menu-item {
-            padding: 12px 20px;
-            margin: 5px;
-            display: inline-block;
-            cursor: pointer;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            background-color: #f8f9fa;
-            transition: background-color 0.2s, border-color 0.2s;
-        }
-        .dashboard-menu-item:hover {
-            background-color: #e9ecef;
-            border-color: #875A7B;
-        }
-        input[name="dashboard-section"]:checked + label .dashboard-menu-item {
-            background-color: #875A7B;
-            color: #ffffff;
-            border-color: #875A7B;
-        }
-        .dashboard-content {
-            display: none;
-            padding: 20px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            background-color: #ffffff;
-            text-align: left;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        }
-        input[name="dashboard-section"] {
-            display: none;
-        }
-        input[name="dashboard-section"]:checked ~ .dashboard-content {
-            display: block;
-        }
-        .oe_separator {
-            border-top: 1px solid #ddd;
-            margin: 60px 0;
-        }
-        @media (max-width: 768px) {
-            .oe_span6 {
-                width: 100%;
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Vendor Bid - Odoo 18 Apps Store</title>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    </head>
+    <body style="font-family: 'Poppins', sans-serif; background-color: #f0f4f8; line-height: 1.6; margin: 0; padding: 0;">
+        <!-- Hero Section -->
+        <section style="background: linear-gradient(135deg, #1e3a8a, #3b82f6); position: relative; overflow: hidden; color: #ffffff; padding: 96px 0; text-align: center;">
+            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 70%); animation: pulse 10s infinite;">
+            </div>
+            <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px; position: relative;">
+                <img src="images/icon.png" style="height: 64px; margin-bottom: 24px;" alt="Vendor Bid Logo">
+                <h1 style="font-size: 48px; font-weight: 800; margin-bottom: 24px;">Vendor Bid</h1>
+                <p style="font-size: 24px; margin-bottom: 40px; max-width: 768px; margin-left: auto; margin-right: auto;">Streamline Procurement with Odoo 18’s Ultimate Vendor Management Solution</p>
+                <a href="https://apps.odoo.com" target="_blank" style="background: linear-gradient(90deg, #3b82f6, #1e40af); color: #ffffff; padding: 12px 24px; border-radius: 50px; text-decoration: none; font-size: 18px; font-weight: 600; display: inline-block;">Get It on Odoo Apps Store</a>
+            </div>
+        </section>
+ 
+        <!-- About Section -->
+        <section style="padding: 80px 0; background-color: #ffffff; text-align: center;">
+            <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+                <h2 style="font-size: 48px; font-weight: 800; margin-bottom: 40px; color: #1f2937;">About Vendor Bid</h2>
+                <p style="font-size: 18px; max-width: 768px; margin: 0 auto; color: #4b5563;">Vendor Bid is a cutting-edge Odoo 18 module designed to revolutionize supply chain management. From secure email verification and supplier registration to RFP creation, quotation management, and advanced analytics, it empowers businesses with seamless, data-driven procurement workflows.</p>
+            </div>
+        </section>
+ 
+        <!-- Features Section -->
+        <section style="padding: 80px 0; background-color: #f3f4f6;">
+            <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+                <h2 style="font-size: 48px; font-weight: 800; margin-bottom: 40px; text-align: center; color: #1f2937;">Explore Vendor Bid Features</h2>
+                <div style="display: flex; flex-wrap: wrap; gap: 24px; justify-content: center;">
+                    <div style="flex: 1 1 300px; background: #f9fafb; padding: 24px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                        <h3 style="font-size: 24px; font-weight: 600; margin-bottom: 8px; color: #1f2937;">Email Verification with OTP</h3>
+                        <p style="font-size: 16px; color: #4b5563;">Securely validate vendor email addresses with OTP-based verification, ensuring a trusted supplier base.</p>
+                        <ul style="list-style: none; padding: 0; margin-top: 8px;">
+                            <li style="padding: 8px 0; font-size: 16px; color: #4b5563;">Validates email uniqueness and blacklist status</li>
+                            <li style="padding: 8px 0; font-size: 16px; color: #4b5563;">Sends OTP to valid emails for verification</li>
+                            <li style="padding: 8px 0; font-size: 16px; color: #4b5563;">Navigates to registration form upon successful OTP</li>
+                        </ul>
+                    </div>
+                    <div style="flex: 1 1 300px; background: #f9fafb; padding: 24px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                        <h3 style="font-size: 24px; font-weight: 600; margin-bottom: 8px; color: #1f2937;">Comprehensive Registration Form</h3>
+                        <p style="font-size: 16px; color: #4b5563;">A robust, five-section form for vendor onboarding, covering company details, financials, and more.</p>
+                        <ul style="list-style: none; padding: 0; margin-top: 8px;">
+                            <li style="padding: 8px 0; font-size: 16px; color: #4b5563;">Company info and validated trade/TIN numbers</li>
+                            <li style="padding: 8px 0; font-size: 16px; color: #4b5563;">Financial details with bank account validation</li>
+                            <li style="padding: 8px 0; font-size: 16px; color: #4b5563;">Dynamic client references (up to 5)</li>
+                            <li style="padding: 8px 0; font-size: 16px; color: #4b5563;">Non-expired certifications and document uploads</li>
+                        </ul>
+                    </div>
+                    <div style="flex: 1 1 300px; background: #f9fafb; padding: 24px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                        <h3 style="font-size: 24px; font-weight: 600; margin-bottom: 8px; color: #1f2937;">Two-Step Verification Process</h3>
+                        <p style="font-size: 16px; color: #4b5563;">Secure approval workflow with initial review and final approval for qualified vendors.</p>
+                        <ul style="list-style: none; padding: 0; margin-top: 8px;">
+                            <li style="padding: 8px 0; font-size: 16px; color: #4b5563;">Reviewers approve, reject, or blacklist with comments</li>
+                            <li style="padding: 8px 0; font-size: 16px; color: #4b5563;">Approvers finalize decisions, creating vendor records</li>
+                            <li style="padding: 8px 0; font-size: 16px; color: #4b5563;">Email notifications with login credentials</li>
+                        </ul>
+                    </div>
+                    <div style="flex: 1 1 300px; background: #f9fafb; padding: 24px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                        <h3 style="font-size: 24px; font-weight: 600; margin-bottom: 8px; color: #1f2937;">RFP Creation & Quotation Submission</h3>
+                        <p style="font-size: 16px; color: #4b5563;">Streamlined RFP creation with a supplier portal for quotation submission.</p>
+                        <ul style="list-style: none; padding: 0; margin-top: 8px;">
+                            <li style="padding: 8px 0; font-size: 16px; color: #4b5563;">Reviewers create RFPs with list and form views</li>
+                            <li style="padding: 8px 0; font-size: 16px; color: #4b5563;">Suppliers submit quotations via portal</li>
+                            <li style="padding: 8px 0; font-size: 16px; color: #4b5563;">Automatic RFQ creation and notifications</li>
+                        </ul>
+                    </div>
+                    <div style="flex: 1 1 300px; background: #f9fafb; padding: 24px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                        <h3 style="font-size: 24px; font-weight: 600; margin-bottom: 8px; color: #1f2937;">RFP Publishing</h3>
+                        <p style="font-size: 16px; color: #4b5563;">Publish RFPs to a portal for supplier access and quotation submission.</p>
+                        <ul style="list-style: none; padding: 0; margin-top: 8px;">
+                            <li style="padding: 8px 0; font-size: 16px; color: #4b5563;">Suppliers view RFPs in the portal</li>
+                            <li style="padding: 8px 0; font-size: 16px; color: #4b5563;">Suppliers submit quotations via portal</li>
+                            <li style="padding: 8px 0; font-size: 16px; color: #4b5563;">Automatic RFQ creation and notifications</li>
+                        </ul>
+                    </div>
+                    <div style="flex: 1 1 300px; background: #f9fafb; padding: 24px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                        <h3 style="font-size: 24px; font-weight: 600; margin-bottom: 8px; color: #1f2937;">Approval Process</h3>
+                        <p style="font-size: 16px; color: #4b5563;">Comprehensive process from RFP creation to supplier bidding and RFQ approval.</p>
+                        <ul style="list-style: none; padding: 0; margin-top: 8px;">
+                            <li style="padding: 8px 0; font-size: 16px; color: #4b5563;">Reviewer creates and submits RFP</li>
+                            <li style="padding: 8px 0; font-size: 16px; color: #4b5563;">Approver publishes RFP to portal</li>
+                            <li style="padding: 8px 0; font-size: 16px; color: #4b5563;">Reviewer scores RFQs, approver selects one</li>
+                        </ul>
+                    </div>
+                    <div style="flex: 1 1 300px; background: #f9fafb; padding: 24px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                        <h3 style="font-size: 24px; font-weight: 600; margin-bottom: 8px; color: #1f2937;">RFP Reporting</h3>
+                        <p style="font-size: 16px; color: #4b5563;">Generate detailed Excel and HTML reports for RFPs, filtered by date and supplier.</p>
+                        <ul style="list-style: none; padding: 0; margin-top: 8px;">
+                            <li style="padding: 8px 0; font-size: 16px; color: #4b5563;">Excel reports with customizable filters</li>
+                            <li style="padding: 8px 0; font-size: 16px; color: #4b5563;">HTML previews for web-based reporting</li>
+                            <li style="padding: 8px 0; font-size: 16px; color: #4b5563;">Includes supplier details and RFP status</li>
+                        </ul>
+                    </div>
+                    <div style="flex: 1 1 300px; background: #f9fafb; padding: 24px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                        <h3 style="font-size: 24px; font-weight: 600; margin-bottom: 8px; color: #1f2937;">RFP Dashboard</h3>
+                        <p style="font-size: 16px; color: #4b5563;">Dynamic dashboard with graphs for approved RFQs and product breakdowns.</p>
+                        <ul style="list-style: none; padding: 0; margin-top: 8px;">
+                            <li style="padding: 8px 0; font-size: 16px; color: #4b5563;">Metrics for approved RFQs and totals</li>
+                            <li style="padding: 8px 0; font-size: 16px; color: #4b5563;">Product-wise breakdown charts</li>
+                            <li style="padding: 8px 0; font-size: 16px; color: #4b5563;">Real-time data visualization</li>
+                        </ul>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: 40px;">
+                    <a href="https://www.youtube.com/watch?v=yA4NLwOLZms" target="_blank" style="background: linear-gradient(90deg, #3b82f6, #1e40af); color: #ffffff; padding: 12px 24px; border-radius: 50px; text-decoration: none; font-size: 18px; font-weight: 600; display: inline-block;">
+                        <i class="fa fa-youtube" style="margin-right: 10px;"></i> Watch on YouTube
+                    </a>
+                </div>
+            </div>
+        </section>
+ 
+        <!-- Workflow Section -->
+        <section style="padding: 80px 0; background-color: #ffffff;">
+            <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+                <h2 style="font-size: 48px; font-weight: 800; margin-bottom: 40px; text-align: center; color: #1f2937;">See the Workflow in Action</h2>
+                <img src="images/workflow.gif" style="width: 100%; border-radius: 8px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);" alt="Vendor Portal Workflow">
+            </div>
+        </section>
+ 
+        <!-- Screenshots Section -->
+        <section style="padding: 80px 0; background-color: #f3f4f6;">
+            <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+                <h2 style="font-size: 48px; font-weight: 800; margin-bottom: 40px; text-align: center; color: #1f2937;">See It in Action</h2>
+                <div style="margin-bottom: 48px;">
+                    <p style="font-size: 18px; margin-bottom: 24px; text-align: center; color: #4b5563;">Input email page where suppliers enter their email to receive an OTP.</p>
+                    <img src="images/login_email.png" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); display: block; margin: 0 auto;" alt="Vendor Portal">
+                </div>
+                <div style="margin-bottom: 48px;">
+                    <p style="font-size: 18px; margin-bottom: 24px; text-align: center; color: #4b5563;">OTP page where suppliers input the received OTP.</p>
+                    <img src="images/otp.png" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); display: block; margin: 0 auto;" alt="OTP Page">
+                </div>
+                <div style="margin-bottom: 48px;">
+                    <p style="font-size: 18px; margin-bottom: 24px; text-align: center; color: #4b5563;">Supplier Registration Form - Part 1</p>
+                    <img src="images/supplier_registration.png" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); display: block; margin: 0 auto;" alt="Supplier Registration Part 1">
+                </div>
+                <div style="margin-bottom: 48px;">
+                    <p style="font-size: 18px; margin-bottom: 24px; text-align: center; color: #4b5563;">Supplier Registration Form - Part 2</p>
+                    <img src="images/supplier_registration2.png" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); display: block; margin: 0 auto;" alt="Supplier Registration Part 2">
+                </div>
+                <div style="margin-bottom: 48px;">
+                    <p style="font-size: 18px; margin-bottom: 24px; text-align: center; color: #4b5563;">Supplier Registration Form - Part 3</p>
+                    <img src="images/supplier_registration3.png" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); display: block; margin: 0 auto;" alt="Supplier Registration Part 3">
+                </div>
+                <div style="margin-bottom: 48px;">
+                    <p style="font-size: 18px; margin-bottom: 24px; text-align: center; color: #4b5563;">Supplier Registration Form - Part 4</p>
+                    <img src="images/supplier_registration4.png" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); display: block; margin: 0 auto;" alt="Supplier Registration Part 4">
+                </div>
+                <div style="margin-bottom: 48px;">
+                    <p style="font-size: 18px; margin-bottom: 24px; text-align: center; color: #4b5563;">Supplier Registration Form - Part 5</p>
+                    <img src="images/supplier_registration5.png" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); display: block; margin: 0 auto;" alt="Supplier Registration Part 5">
+                </div>
+                <div style="margin-bottom: 48px;">
+                    <p style="font-size: 18px; margin-bottom: 24px; text-align: center; color: #4b5563;">View all submitted supplier requests.</p>
+                    <img src="images/reviewer_registration_list_view.png" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); display: block; margin: 0 auto;" alt="Reviewer Registration List View">
+                </div>
+                <div style="margin-bottom: 48px;">
+                    <p style="font-size: 18px; margin-bottom: 24px; text-align: center; color: #4b5563;">Reviewer view to approve, reject, or blacklist supplier emails.</p>
+                    <img src="images/reviewer_registration_form_view.png" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); display: block; margin: 0 auto;" alt="Reviewer Registration Form View">
+                </div>
+                <div style="margin-bottom: 48px;">
+                    <p style="font-size: 18px; margin-bottom: 24px; text-align: center; color: #4b5563;">Approver view of approved supplier requests by reviewers.</p>
+                    <img src="images/approver_registration_list_view.png" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); display: block; margin: 0 auto;" alt="Approver Registration List View">
+                </div>
+                <div style="margin-bottom: 48px;">
+                    <p style="font-size: 18px; margin-bottom: 24px; text-align: center; color: #4b5563;">Approver view to finalize supplier requests.</p>
+                    <img src="images/approver_registration_form_view.png" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); display: block; margin: 0 auto;" alt="Approver Registration Form View">
+                </div>
+                <div style="margin-bottom: 48px;">
+                    <p style="font-size: 18px; margin-bottom: 24px; text-align: center; color: #4b5563;">Reviewer creating an RFP.</p>
+                    <img src="images/creating_rfp.png" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); display: block; margin: 0 auto;" alt="Creating RFP">
+                </div>
+                <div style="margin-bottom: 48px;">
+                    <p style="font-size: 18px; margin-bottom: 24px; text-align: center; color: #4b5563;">Requester creating an RFP for product requests.</p>
+                    <img src="images/request_rfp.png" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); display: block; margin: 0 auto;" alt="Request RFP">
+                </div>
+                <div style="margin Anxiety: 48px;">
+                    <p style="font-size: 18px; margin-bottom: 24px; text-align: center; color: #4b5563;">List of requested RFPs.</p>
+                    <img src="images/requester_rfp_list.png" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); display: block; margin: 0 auto;" alt="Requester RFP List">
+                </div>
+                <div style="margin-bottom: 48px;">
+                    <p style="font-size: 18px; margin-bottom: 24px; text-align: center; color: #4b5563;">Approver view of all requested RFPs.</p>
+                    <img src="images/rfp_approver_list_view.png" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); display: block; margin: 0 auto;" alt="RFP Approver List View">
+                </div>
+                <div style="margin-bottom: 48px;">
+                    <p style="font-size: 18px; margin-bottom: 24px; text-align: center; color: #4b5563;">Approver accepting and publishing an RFP to the portal.</p>
+                    <img src="images/rfp_approver_form_view.png" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); display: block; margin: 0 auto;" alt="RFP Approver Form View">
+                </div>
+                <div style="margin-bottom: 48px;">
+                    <p style="font-size: 18px; margin-bottom: 24px; text-align: center; color: #4b5563;">Supplier view of all published RFPs in the portal.</p>
+                    <img src="images/published_rfp_portal.png" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); display: block; margin: 0 auto;" alt="Published RFP Portal">
+                </div>
+                <div style="margin-bottom: 48px;">
+                    <p style="font-size: 18px; margin-bottom: 24px; text-align: center; color: #4b5563;">Suppliers bidding prices for products in the RFP.</p>
+                    <img src="images/bid_rfp_portal.png" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); display: block; margin: 0 auto;" alt="Bid RFP Portal">
+                </div>
+                <div style="margin-bottom: 48px;">
+                    <p style="font-size: 18px; margin-bottom: 24px; text-align: center; color: #4b5563;">Reviewer scoring and recommending RFQs with system-generated scores.</p>
+                    <img src="images/reviewer_recommand_rfq.png" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); display: block; margin: 0 auto;" alt="Reviewer Recommend RFQ">
+                </div>
+                <div style="margin-bottom: 48px;">
+                    <p style="font-size: 18px; margin-bottom: 24px; text-align: center; color: #4b5563;">Approver accepting one RFQ, generating an automatic purchase order.</p>
+                    <img src="images/approver_accept_rfq.png" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); display: block; margin: 0 auto;" alt="Approver Accept RFQ">
+                </div>
+                <div style="margin-bottom: 48px;">
+                    <p style="font-size: 18px; margin-bottom: 24px; text-align: center; color: #4b5563;">Accepted Purchase Order.</p>
+                    <img src="images/accepted_PO.png" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); display: block; margin: 0 auto;" alt="Accepted Purchase Order">
+                </div>
+                <div style="margin-bottom: 48px;">
+                    <p style="font-size: 18px; margin-bottom: 24px; text-align: center; color: #4b5563;">Supplier report view with downloadable Excel sheet.</p>
+                    <img src="images/supplier_report.png" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); display: block; margin: 0 auto;" alt="Supplier Report">
+                </div>
+                <div style="margin-bottom: 48px;">
+                    <p style="font-size: 18px; margin-bottom: 24px; text-align: center; color: #4b5563;">HTML report of the supplier.</p>
+                    <img src="images/supplier_report_html.png" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); display: block; margin: 0 auto;" alt="Supplier Report HTML">
+                </div>
+                <div style="margin-bottom: 48px;">
+                    <p style="font-size: 18px; margin-bottom: 24px; text-align: center; color: #4b5563;">Supplier profile edit request page.</p>
+                    <img src="images/supplier_edit_profile.png" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); display: block; margin: 0 auto;" alt="Supplier Edit Profile">
+                </div>
+                <div style="margin-bottom: 48px;">
+                    <p style="font-size: 18px; margin-bottom: 24px; text-align: center; color: #4b5563;">Dashboard with graphical views of supplier details.</p>
+                    <img src="images/supplier_dashboard.png" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); display: block; margin: 0 auto;" alt="Supplier Dashboard">
+                </div>
+                <div style="text-align: center; margin-top: 40px;">
+                    <a href="https://drive.google.com/file/d/1ypMGmWZgqPTjoa7CYiOJ0FYsiTsONcVv/view?usp=sharing" target="_blank" style="background: linear-gradient(90deg, #3b82f6, #1e40af); color: #ffffff; padding: 12px 24px; border-radius: 50px; text-decoration: none; font-size: 18px; font-weight: 600; display: inline-block;">Learn More (Technical Documentation)</a>
+                </div>
+            </div>
+        </section>
+ 
+        <!-- Installation Section -->
+        <section style="padding: 80px 0; background-color: #ffffff;">
+            <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+                <h2 style="font-size: 48px; font-weight: 800; margin-bottom: 40px; text-align: center; color: #1f2937;">How to Install</h2>
+                <ol style="max-width: 768px; margin: 0 auto; list-style: decimal; padding-left: 20px; font-size: 18px; color: #4b5563;">
+                    <li style="margin-bottom: 16px;">Visit the <a href="https://apps.odoo.com" target="_blank" style="color: #2563eb; text-decoration: underline;">Odoo Apps Store</a> and search for "Vendor Bid".</li>
+                    <li style="margin-bottom: 16px;">Click "Install" to add the module to your Odoo 18 instance.</li>
+                    <li style="margin-bottom: 16px;">Configure settings via the Odoo Apps menu.</li>
+                    <li style="margin-bottom: 16px;">Configure Outgoing Email server if not configured.</li>
+                    <li style="margin-bottom: 16px;">Start managing vendors and RFPs effortlessly!</li>
+                </ol>
+            </div>
+        </section>
+ 
+        <!-- Contact Section -->
+        <section style="padding: 80px 0; background-color: #2563eb; text-align: center;">
+            <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+                <h2 style="font-size: 48px; font-weight: 800; margin-bottom: 40px; color: #ffffff;">Get in Touch</h2>
+                <p style="font-size: 24px; margin-bottom: 40px; color: #ffffff;">Have questions or need support? Our team is here to help!</p>
+                <a href="mailto:support@vendorbid.com" style="background: linear-gradient(90deg, #3b82f6, #1e40af); color: #ffffff; padding: 12px 24px; border-radius: 50px; text-decoration: none; font-size: 18px; font-weight: 600; display: inline-block;">Contact Support</a>
+            </div>
+        </section>
+ 
+        <!-- Footer -->
+        <footer style="padding: 80px 0; background-color: #1f2937; color: #ffffff; text-align: center;">
+            <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+                <p style="font-size: 18px; margin-bottom: 16px;">© 2025 Vendor Bid. All rights reserved.</p>
+                <div style="display: flex; justify-content: center; gap: 24px; margin-bottom: 16px;">
+                    <a href="https://twitter.com/vendorbid" style="display: inline-block;">
+                        <i class="fab fa-twitter" style="font-size: 24px; color: #2563eb;"></i>
+                    </a>
+                    <a href="https://linkedin.com/company/vendorbid" style="display: inline-block;">
+                        <i class="fab fa-linkedin" style="font-size: 24px; color: #2563eb;"></i>
+                    </a>
+                </div>
+                <div style="font-size: 18px;">
+                    <a href="https://vendorbid.com" style="color: #2563eb; text-decoration: underline; margin: 0 8px;">Visit Our Website</a> | 
+                    <a href="#privacy" style="color: #2563eb; text-decoration: underline; margin: 0 8px;">Privacy Policy</a>
+                </div>
+            </div>
+        </footer>
+ 
+        <!-- Inline Animation for Hero Section -->
+        <style>
+            @keyframes pulse {
+                0% { transform: scale(1); opacity: 0.5; }
+                50% { transform: scale(1.2); opacity: 0.3; }
+                100% { transform: scale(1); opacity: 0.5; }
             }
-            .oe_picture.oe_screenshot {
-                max-width: 90%;
+            a:hover {
+                transform: scale(1.05);
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
             }
-            .oe_slogan:first-child {
-                font-size: 28px;
+            @media (max-width: 768px) {
+                h1 { font-size: 36px; }
+                p { font-size: 20px; }
+                section { padding: 48px 0; }
+                div[style*="flex: 1 1 300px"] { flex: 1 1 100%; }
             }
-            .oe_slogan:nth-child(2) {
-                font-size: 18px;
+            @media (max-width: 576px) {
+                div[style*="max-width: 1200px"] { padding: 0 10px; }
             }
-        }
-        @media (max-width: 576px) {
-            .oe_picture.oe_screenshot {
-                max-width: 95%;
-            }
-            .oe_container {
-                padding: 40px 0;
-            }
-            .oe_row {
-                padding: 0 10px;
-            }
-        }
-    </style>
-</head>
-<body>
-<!-- Hero Section -->
-<section class="oe_container">
-    <div class="oe_row oe_spaced">
-        <h2 class="oe_slogan">Vendor Bid</h2>
-        <h3 class="oe_slogan">Streamline Procurement with Odoo 18’s Ultimate Vendor Management Solution</h3>
-        <div>
-            <img class="oe_picture oe_screenshot" src="images/icon.png" alt="Vendor Bid Logo">
-        </div>
-        <div>
-            <a href="" target="_blank" class="btn">Get It on Odoo Apps Store</a>
-=======
-    <title>Vendor Bid - Odoo 18 Apps Store</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-</head>
-<body style="font-family: 'Poppins', sans-serif; background-color: #f0f4f8; line-height: 1.6; margin: 0; padding: 0;">
-    <!-- Hero Section -->
-    <section style="background: linear-gradient(135deg, #1e3a8a, #3b82f6); position: relative; overflow: hidden; color: #ffffff; padding: 96px 0; text-align: center;">
-        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 70%); animation: pulse 10s infinite;">
-        </div>
-        <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px; position: relative;">
-            <img src="images/icon.png" style="height: 64px; margin-bottom: 24px;" alt="Vendor Bid Logo">
-            <h1 style="font-size: 48px; font-weight: 800; margin-bottom: 24px;">Vendor Bid</h1>
-            <p style="font-size: 24px; margin-bottom: 40px; max-width: 768px; margin-left: auto; margin-right: auto;">Streamline Procurement with Odoo 18’s Ultimate Vendor Management Solution</p>
-            <a href="https://apps.odoo.com" target="_blank" style="background: linear-gradient(90deg, #3b82f6, #1e40af); color: #ffffff; padding: 12px 24px; border-radius: 50px; text-decoration: none; font-size: 18px; font-weight: 600; display: inline-block;">Get It on Odoo Apps Store</a>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section style="padding: 80px 0; background-color: #ffffff; text-align: center;">
-        <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-            <h2 style="font-size: 48px; font-weight: 800; margin-bottom: 40px; color: #1f2937;">About Vendor Bid</h2>
-            <p style="font-size: 18px; max-width: 768px; margin: 0 auto; color: #4b5563;">Vendor Bid is a cutting-edge Odoo 18 module designed to revolutionize supply chain management. From secure email verification and supplier registration to RFP creation, quotation management, and advanced analytics, it empowers businesses with seamless, data-driven procurement workflows.</p>
->>>>>>> 5f21120 (Added)
-        </div>
-    </div>
-</section>
-
-<<<<<<< HEAD
-<!-- About Section -->
-<section class="oe_container oe_dark">
-    <div class="oe_row oe_spaced">
-        <h2 class="oe_slogan">About Vendor Bid</h2>
-        <h3 class="oe_slogan">Revolutionize Supply Chain Management</h3>
-        <div class="oe_span6 text-justify oe_mt32">
-            <p>Vendor Bid is a cutting-edge Odoo 18 module designed to revolutionize supply chain management. From secure email verification and supplier registration to RFP creation, quotation management, and advanced analytics, it empowers businesses with seamless, data-driven procurement workflows.</p>
-        </div>
-        <div class="oe_span6">
-            <img class="oe_picture oe_screenshot" src="images/supplier_dashboard.png" alt="Supplier Dashboard">
-        </div>
-    </div>
-</section>
-
-<!-- Dashboard Section -->
-<section class="oe_container">
-    <div class="oe_row oe_spaced">
-        <h2 class="oe_slogan">Explore Vendor Bid Features</h2>
-        <h3 class="oe_slogan">Comprehensive Procurement Tools</h3>
-        <div class="dashboard-menu">
-            <div>
-                <input type="radio" name="dashboard-section" id="email-verification-radio" checked>
-                <label for="email-verification-radio">
-                    <div class="dashboard-menu-item">Email Verification</div>
-                </label>
-                <div class="dashboard-content" id="email-verification">
-                    <h3>Email Verification with OTP</h3>
-                    <p>Securely validate vendor email addresses with OTP-based verification. Only new, non-blacklisted emails are accepted, ensuring a trusted supplier base.</p>
-                    <ul>
-                        <li>Validates email uniqueness and blacklist status</li>
-                        <li>Sends OTP to valid IPT emails for verification</li>
-                        <li>Navigates to registration form upon successful OTP</li>
-                    </ul>
-                    <img class="oe_picture oe_screenshot" src="images/login_email.png" alt="Email Verification">
-                </div>
-            </div>
-            <div>
-                <input type="radio" name="dashboard-section" id="registration-form-radio">
-                <label for="registration-form-radio">
-                    <div class="dashboard-menu-item">Registration Form</div>
-                </label>
-                <div class="dashboard-content" id="registration-form">
-                    <h3>Comprehensive Registration Form</h3>
-                    <p>A robust, five-section form for vendor onboarding, covering company details, financials, client references, certifications, and document submissions, with strict validation.</p>
-                    <ul>
-                        <li>Company info, contacts, and validated trade/TIN numbers</li>
-                        <li>Financial details with bank account validation</li>
-                        <li>Dynamic client references (up to 5)</li>
-                        <li>Non-expired certifications and document uploads (≤1MB)</li>
-                        <li>Automatic validation with user-friendly error messages</li>
-                    </ul>
-                    <img class="oe_picture oe_screenshot" src="images/supplier_registration.png" alt="Registration Form">
-                </div>
-            </div>
-            <div>
-                <input type="radio" name="dashboard-section" id="two-step-verification-radio">
-                <label for="two-step-verification-radio">
-                    <div class="dashboard-menu-item">Two-Step Verification</div>
-                </label>
-                <div class="dashboard-content" id="two-step-verification">
-                    <h3>Two-Step Verification Process</h3>
-                    <p>A secure approval workflow with initial review and final approval, ensuring only qualified vendors are onboarded with automated account creation.</p>
-                    <ul>
-                        <li>Reviewers approve, reject, or blacklist with comments</li>
-                        <li>Approvers finalize decisions, creating vendor records</li>
-                        <li>Email notifications with login credentials for suppliers</li>
-                        <li>Supports list, form, Kanban, and search views</li>
-                    </ul>
-                    <img class="oe_picture oe_screenshot" src="images/reviewer_registration_form_view.png" alt="Two-Step Verification">
-                </div>
-            </div>
-            <div>
-                <input type="radio" name="dashboard-section" id="rfp-creation-radio">
-                <label for="rfp-creation-radio">
-                    <div class="dashboard-menu-item">RFP Creation</div>
-                </label>
-                <div class="dashboard-content" id="rfp-creation">
-                    <h3>RFP Creation & Quotation Submission</h3>
-                    <p>Streamlined RFP creation by reviewers, with a supplier portal for quotation submission, RFQ generation, and reviewer scoring.</p>
-                    <ul>
-                        <li>Reviewers create RFPs with list and form views</li>
-                        <li>Suppliers submit quotations via portal</li>
-                        <li>Automatic RFQ creation and reviewer notifications</li>
-                        <li>Scoring based on delivery, charges, and terms</li>
-                        <li>Workflows for draft, submitted, approved, and closed states</li>
-                    </ul>
-                    <img class="oe_picture oe_screenshot" src="images/creating_rfp.png" alt="RFP Creation">
-                </div>
-            </div>
-            <div>
-                <input type="radio" name="dashboard-section" id="rfp-publish-radio">
-                <label for="rfp-publish-radio">
-                    <div class="dashboard-menu-item">RFP Publish</div>
-                </label>
-                <div class="dashboard-content" id="rfp-publish">
-                    <h3>RFP Published</h3>
-                    <p>After the final approve the requested products are published in the portal with number of quantity and additional information.</p>
-                    <ul>
-                        <li>Supplier can see the Rfp</li>
-                        <li>Suppliers submit quotations via portal</li>
-                        <li>Automatic RFQ creation and reviewer notifications</li>
-                    </ul>
-                    <img class="oe_picture oe_screenshot" src="images/published_rfp_portal.png" alt="RFP Publish">
-                </div>
-            </div>
-            <div>
-                <input type="radio" name="dashboard-section" id="data-approval-process-radio">
-                <label for="data-approval-process-radio">
-                    <div class="dashboard-menu-item">Approval Process</div>
-                </label>
-                <div class="dashboard-content" id="data-approval-process">
-                    <h3>Approval Process</h3>
-                    <p>Total approval process From creating RFP to publishing and supplier Biding to bid approve.</p>
-                    <h4>RFP</h4>
-                    <ul>
-                        <li>Reviewer creates RFP then submit it</li>
-                        <li>Approver approved</li>
-                        <li>RFP post in portal</li>
-                    </ul>
-                    <p class="oe_mb32">After RFP post in portal All the registered supplier will get email. Then they can bid the product which are in the RFP. And then submit. A supplier can submit more than one bid. When The approver close the rfp time then RFQ approval process start.</p>
-                    <h4>RFQ Approval Process</h4>
-                    <ul>
-                        <li>Reviewer recommends and gives a score 1-10 to all the recommended.</li>
-                        <li>Recommended RFQ goes to the approver</li>
-                        <li>Approver approves one rfq. He can not approve more than one RFQ for one RFP.</li>
-                        <li>Automatically creates a new purchase order</li>
-                    </ul>
-                    <img class="oe_picture oe_screenshot" src="images/approver_accept_rfq.png" alt="Approval Process">
-                </div>
-            </div>
-            <div>
-                <input type="radio" name="dashboard-section" id="rfp-report-radio">
-                <label for="rfp-report-radio">
-                    <div class="dashboard-menu-item">RFP Report</div>
-                </label>
-                <div class="dashboard-content" id="rfp-report">
-                    <h3>RFP Reporting</h3>
-                    <p>Generate detailed Excel and HTML reports for RFPs, filtered by date range and supplier name, for comprehensive procurement insights.</p>
-                    <ul>
-                        <li>Excel reports with customizable filters</li>
-                        <li>HTML previews for web-based reporting</li>
-                        <li>Includes supplier details, RFP status, and product lines</li>
-                    </ul>
-                    <img class="oe_picture oe_screenshot" src="images/supplier_report.png" alt="RFP Reporting">
-                </div>
-            </div>
-            <div>
-                <input type="radio" name="dashboard-section" id="rfp-dashboard-radio">
-                <label for="rfp-dashboard-radio">
-                    <div class="dashboard-menu-item">RFP Dashboard</div>
-                </label>
-                <div class="dashboard-content" id="rfp-dashboard">
-                    <h3>RFP Dashboard</h3>
-                    <p>A dynamic dashboard with graphs and charts showcasing approved RFQs, total amounts, and product-wise breakdowns.</p>
-                    <ul>
-                        <li>Metrics for approved RFQs and total amounts</li>
-                        <li>Product-wise breakdown charts</li>
-                        <li>Real-time data visualization</li>
-                    </ul>
-                    <img class="oe_picture oe_screenshot" src="images/supplier_dashboard.png" alt="RFP Dashboard">
-=======
-    <!-- Features Section -->
-    <section style="padding: 80px 0; background-color: #f3f4f6;">
-        <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-            <h2 style="font-size: 48px; font-weight: 800; margin-bottom: 40px; text-align: center; color: #1f2937;">Explore Vendor Bid Features</h2>
-            <div style="display: flex; flex-wrap: wrap; gap: 24px; justify-content: center;">
-                <div style="flex: 1 1 300px; background: #f9fafb; padding: 24px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-                    <h3 style="font-size: 24px; font-weight: 600; margin-bottom: 8px; color: #1f2937;">Email Verification with OTP</h3>
-                    <p style="font-size: 16px; color: #4b5563;">Securely validate vendor email addresses with OTP-based verification, ensuring a trusted supplier base.</p>
-                    <ul style="list-style: none; padding: 0; margin-top: 8px;">
-                        <li style="padding: 8px 0; font-size: 16px; color: #4b5563;">Validates email uniqueness and blacklist status</li>
-                        <li style="padding: 8px 0; font-size: 16px; color: #4b5563;">Sends OTP to valid emails for verification</li>
-                        <li style="padding: 8px 0; font-size: 16px; color: #4b5563;">Navigates to registration form upon successful OTP</li>
-                    </ul>
-                </div>
-                <div style="flex: 1 1 300px; background: #f9fafb; padding: 24px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-                    <h3 style="font-size: 24px; font-weight: 600; margin-bottom: 8px; color: #1f2937;">Comprehensive Registration Form</h3>
-                    <p style="font-size: 16px; color: #4b5563;">A robust, five-section form for vendor onboarding, covering company details, financials, and more.</p>
-                    <ul style="list-style: none; padding: 0; margin-top: 8px;">
-                        <li style="padding: 8px 0; font-size: 16px; color: #4b5563;">Company info and validated trade/TIN numbers</li>
-                        <li style="padding: 8px 0; font-size: 16px; color: #4b5563;">Financial details with bank account validation</li>
-                        <li style="padding: 8px 0; font-size: 16px; color: #4b5563;">Dynamic client references (up to 5)</li>
-                        <li style="padding: 8px 0; font-size: 16px; color: #4b5563;">Non-expired certifications and document uploads</li>
-                    </ul>
-                </div>
-                <div style="flex: 1 1 300px; background: #f9fafb; padding: 24px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-                    <h3 style="font-size: 24px; font-weight: 600; margin-bottom: 8px; color: #1f2937;">Two-Step Verification Process</h3>
-                    <p style="font-size: 16px; color: #4b5563;">Secure approval workflow with initial review and final approval for qualified vendors.</p>
-                    <ul style="list-style: none; padding: 0; margin-top: 8px;">
-                        <li style="padding: 8px 0; font-size: 16px; color: #4b5563;">Reviewers approve, reject, or blacklist with comments</li>
-                        <li style="padding: 8px 0; font-size: 16px; color: #4b5563;">Approvers finalize decisions, creating vendor records</li>
-                        <li style="padding: 8px 0; font-size: 16px; color: #4b5563;">Email notifications with login credentials</li>
-                    </ul>
-                </div>
-                <div style="flex: 1 1 300px; background: #f9fafb; padding: 24px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-                    <h3 style="font-size: 24px; font-weight: 600; margin-bottom: 8px; color: #1f2937;">RFP Creation & Quotation Submission</h3>
-                    <p style="font-size: 16px; color: #4b5563;">Streamlined RFP creation with a supplier portal for quotation submission.</p>
-                    <ul style="list-style: none; padding: 0; margin-top: 8px;">
-                        <li style="padding: 8px 0; font-size: 16px; color: #4b5563;">Reviewers create RFPs with list and form views</li>
-                        <li style="padding: 8px 0; font-size: 16px; color: #4b5563;">Suppliers submit quotations via portal</li>
-                        <li style="padding: 8px 0; font-size: 16px; color: #4b5563;">Automatic RFQ creation and notifications</li>
-                    </ul>
-                </div>
-                <div style="flex: 1 1 300px; background: #f9fafb; padding: 24px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-                    <h3 style="font-size: 24px; font-weight: 600; margin-bottom: 8px; color: #1f2937;">RFP Publishing</h3>
-                    <p style="font-size: 16px; color: #4b5563;">Publish RFPs to a portal for supplier access and quotation submission.</p>
-                    <ul style="list-style: none; padding: 0; margin-top: 8px;">
-                        <li style="padding: 8px 0; font-size: 16px; color: #4b5563;">Suppliers view RFPs in the portal</li>
-                        <li style="padding: 8px 0; font-size: 16px; color: #4b5563;">Suppliers submit quotations via portal</li>
-                        <li style="padding: 8px 0; font-size: 16px; color: #4b5563;">Automatic RFQ creation and notifications</li>
-                    </ul>
-                </div>
-                <div style="flex: 1 1 300px; background: #f9fafb; padding: 24px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-                    <h3 style="font-size: 24px; font-weight: 600; margin-bottom: 8px; color: #1f2937;">Approval Process</h3>
-                    <p style="font-size: 16px; color: #4b5563;">Comprehensive process from RFP creation to supplier bidding and RFQ approval.</p>
-                    <ul style="list-style: none; padding: 0; margin-top: 8px;">
-                        <li style="padding: 8px 0; font-size: 16px; color: #4b5563;">Reviewer creates and submits RFP</li>
-                        <li style="padding: 8px 0; font-size: 16px; color: #4b5563;">Approver publishes RFP to portal</li>
-                        <li style="padding: 8px 0; font-size: 16px; color: #4b5563;">Reviewer scores RFQs, approver selects one</li>
-                    </ul>
-                </div>
-                <div style="flex: 1 1 300px; background: #f9fafb; padding: 24px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-                    <h3 style="font-size: 24px; font-weight: 600; margin-bottom: 8px; color: #1f2937;">RFP Reporting</h3>
-                    <p style="font-size: 16px; color: #4b5563;">Generate detailed Excel and HTML reports for RFPs, filtered by date and supplier.</p>
-                    <ul style="list-style: none; padding: 0; margin-top: 8px;">
-                        <li style="padding: 8px 0; font-size: 16px; color: #4b5563;">Excel reports with customizable filters</li>
-                        <li style="padding: 8px 0; font-size: 16px; color: #4b5563;">HTML previews for web-based reporting</li>
-                        <li style="padding: 8px 0; font-size: 16px; color: #4b5563;">Includes supplier details and RFP status</li>
-                    </ul>
-                </div>
-                <div style="flex: 1 1 300px; background: #f9fafb; padding: 24px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-                    <h3 style="font-size: 24px; font-weight: 600; margin-bottom: 8px; color: #1f2937;">RFP Dashboard</h3>
-                    <p style="font-size: 16px; color: #4b5563;">Dynamic dashboard with graphs for approved RFQs and product breakdowns.</p>
-                    <ul style="list-style: none; padding: 0; margin-top: 8px;">
-                        <li style="padding: 8px 0; font-size: 16px; color: #4b5563;">Metrics for approved RFQs and totals</li>
-                        <li style="padding: 8px 0; font-size: 16px; color: #4b5563;">Product-wise breakdown charts</li>
-                        <li style="padding: 8px 0; font-size: 16px; color: #4b5563;">Real-time data visualization</li>
-                    </ul>
->>>>>>> 5f21120 (Added)
-                </div>
-            </div>
-            <div style="text-align: center; margin-top: 40px;">
-                <a href="https://www.youtube.com/watch?v=yA4NLwOLZms" target="_blank" style="background: linear-gradient(90deg, #3b82f6, #1e40af); color: #ffffff; padding: 12px 24px; border-radius: 50px; text-decoration: none; font-size: 18px; font-weight: 600; display: inline-block;">
-                    <i class="fa fa-youtube" style="margin-right: 10px;"></i> Watch on YouTube
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<<<<<<< HEAD
-<!-- Workflow Section -->
-<section class="oe_container oe_dark">
-    <div class="oe_row oe_spaced">
-        <h2 class="oe_slogan">See the Workflow in Action</h2>
-        <h3 class="oe_slogan">Visualize the Procurement Process</h3>
-        <div>
-            <img class="oe_picture oe_screenshot" src="images/workflow.gif" alt="Vendor Portal Workflow">
-=======
-    <!-- Workflow Section -->
-    <section style="padding: 80px 0; background-color: #ffffff;">
-        <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-            <h2 style="font-size: 48px; font-weight: 800; margin-bottom: 40px; text-align: center; color: #1f2937;">See the Workflow in Action</h2>
-            <img src="images/workflow.gif" style="width: 100%; border-radius: 8px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);" alt="Vendor Portal Workflow">
->>>>>>> 5f21120 (Added)
-        </div>
-    </div>
-</section>
-
-<<<<<<< HEAD
-<!-- Screenshots Section -->
-<section class="oe_container">
-    <div class="oe_row oe_spaced">
-        <h2 class="oe_slogan">See It in Action</h2>
-        <h3 class="oe_slogan">Screenshots of Vendor Bid Features</h3>
-        <div class="oe_span6 text-justify oe_mt32">
-            <p>This is Input email page, Where supplier put his email. And an OTP will be sent to the mail.</p>
-=======
-    <!-- Screenshots Section -->
-    <section style="padding: 80px 0; background-color: #f3f4f6;">
-        <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-            <h2 style="font-size: 48px; font-weight: 800; margin-bottom: 40px; text-align: center; color: #1f2937;">See It in Action</h2>
-            <div style="margin-bottom: 48px;">
-                <p style="font-size: 18px; margin-bottom: 24px; text-align: center; color: #4b5563;">Input email page where suppliers enter their email to receive an OTP.</p>
-                <img src="images/login_email.png" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); display: block; margin: 0 auto;" alt="Vendor Portal">
-            </div>
-            <div style="margin-bottom: 48px;">
-                <p style="font-size: 18px; margin-bottom: 24px; text-align: center; color: #4b5563;">OTP page where suppliers input the received OTP.</p>
-                <img src="images/otp.png" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); display: block; margin: 0 auto;" alt="OTP Page">
-            </div>
-            <div style="margin-bottom: 48px;">
-                <p style="font-size: 18px; margin-bottom: 24px; text-align: center; color: #4b5563;">Supplier Registration Form - Part 1</p>
-                <img src="images/supplier_registration.png" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); display: block; margin: 0 auto;" alt="Supplier Registration Part 1">
-            </div>
-            <div style="margin-bottom: 48px;">
-                <p style="font-size: 18px; margin-bottom: 24px; text-align: center; color: #4b5563;">Supplier Registration Form - Part 2</p>
-                <img src="images/supplier_registration2.png" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); display: block; margin: 0 auto;" alt="Supplier Registration Part 2">
-            </div>
-            <div style="margin-bottom: 48px;">
-                <p style="font-size: 18px; margin-bottom: 24px; text-align: center; color: #4b5563;">Supplier Registration Form - Part 3</p>
-                <img src="images/supplier_registration3.png" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); display: block; margin: 0 auto;" alt="Supplier Registration Part 3">
-            </div>
-            <div style="margin-bottom: 48px;">
-                <p style="font-size: 18px; margin-bottom: 24px; text-align: center; color: #4b5563;">Supplier Registration Form - Part 4</p>
-                <img src="images/supplier_registration4.png" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); display: block; margin: 0 auto;" alt="Supplier Registration Part 4">
-            </div>
-            <div style="margin-bottom: 48px;">
-                <p style="font-size: 18px; margin-bottom: 24px; text-align: center; color: #4b5563;">Supplier Registration Form - Part 5</p>
-                <img src="images/supplier_registration5.png" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); display: block; margin: 0 auto;" alt="Supplier Registration Part 5">
-            </div>
-            <div style="margin-bottom: 48px;">
-                <p style="font-size: 18px; margin-bottom: 24px; text-align: center; color: #4b5563;">View all submitted supplier requests.</p>
-                <img src="images/reviewer_registration_list_view.png" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); display: block; margin: 0 auto;" alt="Reviewer Registration List View">
-            </div>
-            <div style="margin-bottom: 48px;">
-                <p style="font-size: 18px; margin-bottom: 24px; text-align: center; color: #4b5563;">Reviewer view to approve, reject, or blacklist supplier emails.</p>
-                <img src="images/reviewer_registration_form_view.png" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); display: block; margin: 0 auto;" alt="Reviewer Registration Form View">
-            </div>
-            <div style="margin-bottom: 48px;">
-                <p style="font-size: 18px; margin-bottom: 24px; text-align: center; color: #4b5563;">Approver view of approved supplier requests by reviewers.</p>
-                <img src="images/approver_registration_list_view.png" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); display: block; margin: 0 auto;" alt="Approver Registration List View">
-            </div>
-            <div style="margin-bottom: 48px;">
-                <p style="font-size: 18px; margin-bottom: 24px; text-align: center; color: #4b5563;">Approver view to finalize supplier requests.</p>
-                <img src="images/approver_registration_form_view.png" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); display: block; margin: 0 auto;" alt="Approver Registration Form View">
-            </div>
-            <div style="margin-bottom: 48px;">
-                <p style="font-size: 18px; margin-bottom: 24px; text-align: center; color: #4b5563;">Reviewer creating an RFP.</p>
-                <img src="images/creating_rfp.png" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); display: block; margin: 0 auto;" alt="Creating RFP">
-            </div>
-            <div style="margin-bottom: 48px;">
-                <p style="font-size: 18px; margin-bottom: 24px; text-align: center; color: #4b5563;">Requester creating an RFP for product requests.</p>
-                <img src="images/request_rfp.png" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); display: block; margin: 0 auto;" alt="Request RFP">
-            </div>
-            <div style="margin Anxiety: 48px;">
-                <p style="font-size: 18px; margin-bottom: 24px; text-align: center; color: #4b5563;">List of requested RFPs.</p>
-                <img src="images/requester_rfp_list.png" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); display: block; margin: 0 auto;" alt="Requester RFP List">
-            </div>
-            <div style="margin-bottom: 48px;">
-                <p style="font-size: 18px; margin-bottom: 24px; text-align: center; color: #4b5563;">Approver view of all requested RFPs.</p>
-                <img src="images/rfp_approver_list_view.png" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); display: block; margin: 0 auto;" alt="RFP Approver List View">
-            </div>
-            <div style="margin-bottom: 48px;">
-                <p style="font-size: 18px; margin-bottom: 24px; text-align: center; color: #4b5563;">Approver accepting and publishing an RFP to the portal.</p>
-                <img src="images/rfp_approver_form_view.png" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); display: block; margin: 0 auto;" alt="RFP Approver Form View">
-            </div>
-            <div style="margin-bottom: 48px;">
-                <p style="font-size: 18px; margin-bottom: 24px; text-align: center; color: #4b5563;">Supplier view of all published RFPs in the portal.</p>
-                <img src="images/published_rfp_portal.png" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); display: block; margin: 0 auto;" alt="Published RFP Portal">
-            </div>
-            <div style="margin-bottom: 48px;">
-                <p style="font-size: 18px; margin-bottom: 24px; text-align: center; color: #4b5563;">Suppliers bidding prices for products in the RFP.</p>
-                <img src="images/bid_rfp_portal.png" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); display: block; margin: 0 auto;" alt="Bid RFP Portal">
-            </div>
-            <div style="margin-bottom: 48px;">
-                <p style="font-size: 18px; margin-bottom: 24px; text-align: center; color: #4b5563;">Reviewer scoring and recommending RFQs with system-generated scores.</p>
-                <img src="images/reviewer_recommand_rfq.png" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); display: block; margin: 0 auto;" alt="Reviewer Recommend RFQ">
-            </div>
-            <div style="margin-bottom: 48px;">
-                <p style="font-size: 18px; margin-bottom: 24px; text-align: center; color: #4b5563;">Approver accepting one RFQ, generating an automatic purchase order.</p>
-                <img src="images/approver_accept_rfq.png" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); display: block; margin: 0 auto;" alt="Approver Accept RFQ">
-            </div>
-            <div style="margin-bottom: 48px;">
-                <p style="font-size: 18px; margin-bottom: 24px; text-align: center; color: #4b5563;">Accepted Purchase Order.</p>
-                <img src="images/accepted_PO.png" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); display: block; margin: 0 auto;" alt="Accepted Purchase Order">
-            </div>
-            <div style="margin-bottom: 48px;">
-                <p style="font-size: 18px; margin-bottom: 24px; text-align: center; color: #4b5563;">Supplier report view with downloadable Excel sheet.</p>
-                <img src="images/supplier_report.png" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); display: block; margin: 0 auto;" alt="Supplier Report">
-            </div>
-            <div style="margin-bottom: 48px;">
-                <p style="font-size: 18px; margin-bottom: 24px; text-align: center; color: #4b5563;">HTML report of the supplier.</p>
-                <img src="images/supplier_report_html.png" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); display: block; margin: 0 auto;" alt="Supplier Report HTML">
-            </div>
-            <div style="margin-bottom: 48px;">
-                <p style="font-size: 18px; margin-bottom: 24px; text-align: center; color: #4b5563;">Supplier profile edit request page.</p>
-                <img src="images/supplier_edit_profile.png" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); display: block; margin: 0 auto;" alt="Supplier Edit Profile">
-            </div>
-            <div style="margin-bottom: 48px;">
-                <p style="font-size: 18px; margin-bottom: 24px; text-align: center; color: #4b5563;">Dashboard with graphical views of supplier details.</p>
-                <img src="images/supplier_dashboard.png" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); display: block; margin: 0 auto;" alt="Supplier Dashboard">
-            </div>
-            <div style="text-align: center; margin-top: 40px;">
-                <a href="https://drive.google.com/file/d/1ypMGmWZgqPTjoa7CYiOJ0FYsiTsONcVv/view?usp=sharing" target="_blank" style="background: linear-gradient(90deg, #3b82f6, #1e40af); color: #ffffff; padding: 12px 24px; border-radius: 50px; text-decoration: none; font-size: 18px; font-weight: 600; display: inline-block;">Learn More (Technical Documentation)</a>
-            </div>
->>>>>>> 5f21120 (Added)
-        </div>
-        <div class="oe_span6">
-            <img class="oe_picture oe_screenshot" src="images/login_email.png" alt="Vendor Portal">
-        </div>
-    </div>
-</section>
-<section class="oe_container oe_dark">
-    <div class="oe_row oe_spaced">
-        <div class="oe_span6">
-            <img class="oe_picture oe_screenshot" src="images/otp.png" alt="OTP Page">
-        </div>
-        <div class="oe_span6 text-justify oe_mt32">
-            <p>This is the OTP page where user supplier input the OTP.</p>
-        </div>
-    </div>
-</section>
-<section class="oe_container">
-    <div class="oe_row oe_spaced">
-        <div class="oe_span6 text-justify oe_mt32">
-            <p>Supplier Registration Form part 1</p>
-        </div>
-        <div class="oe_span6">
-            <img class="oe_picture oe_screenshot" src="images/supplier_registration.png" alt="Supplier Registration Part 1">
-        </div>
-    </div>
-</section>
-<section class="oe_container oe_dark">
-    <div class="oe_row oe_spaced">
-        <div class="oe_span6">
-            <img class="oe_picture oe_screenshot" src="images/supplier_registration2.png" alt="Supplier Registration Part 2">
-        </div>
-        <div class="oe_span6 text-justify oe_mt32">
-            <p>Supplier Registration Form part 2</p>
-        </div>
-    </div>
-</section>
-<section class="oe_container">
-    <div class="oe_row oe_spaced">
-        <div class="oe_span6 text-justify oe_mt32">
-            <p>Supplier Registration Form part 3</p>
-        </div>
-        <div class="oe_span6">
-            <img class="oe_picture oe_screenshot" src="images/supplier_registration3.png" alt="Supplier Registration Part 3">
-        </div>
-    </div>
-</section>
-<section class="oe_container oe_dark">
-    <div class="oe_row oe_spaced">
-        <div class="oe_span6">
-            <img class="oe_picture oe_screenshot" src="images/supplier_registration4.png" alt="Supplier Registration Part 4">
-        </div>
-        <div class="oe_span6 text-justify oe_mt32">
-            <p>Supplier Registration Form part 4</p>
-        </div>
-    </div>
-</section>
-<section class="oe_container">
-    <div class="oe_row oe_spaced">
-        <div class="oe_span6 text-justify oe_mt32">
-            <p>Supplier Registration Form part 5</p>
-        </div>
-        <div class="oe_span6">
-            <img class="oe_picture oe_screenshot" src="images/supplier_registration5.png" alt="Supplier Registration Part 5">
-        </div>
-    </div>
-</section>
-<section class="oe_container oe_dark">
-    <div class="oe_row oe_spaced">
-        <div class="oe_span6">
-            <img class="oe_picture oe_screenshot" src="images/reviewer_registration_list_view.png" alt="Reviewer Registration List View">
-        </div>
-        <div class="oe_span6 text-justify oe_mt32">
-            <p>In this page The user will see all the submitted Supplier Request</p>
-        </div>
-    </div>
-</section>
-<section class="oe_container">
-    <div class="oe_row oe_spaced">
-        <div class="oe_span6 text-justify oe_mt\(\) {
-            <img class="oe_picture oe_screenshot" src="images/reviewer_registration_form_view.png" alt="Reviewer Registration Form View">
-        </div>
-        <div class="oe_span6 text-justify oe_mt32">
-            <p>In this view Reviewer can see all the details of the requested supplier. And using the action button can approve, reject or Blacklist the Email.</p>
-        </div>
-    </div>
-</section>
-<section class="oe_container oe_dark">
-    <div class="oe_row oe_spaced">
-        <div class="oe_span6">
-            <img class="oe_picture oe_screenshot" src="images/approver_registration_list_view.png" alt="Approver Registration List View">
-        </div>
-        <div class="oe_span6 text-justify oe_mt32">
-            <p>In this view Approver can see all the approved supplier request by the Reviewer.</p>
-        </div>
-    </div>
-</section>
-<section class="oe_container">
-    <div class="oe_row oe_spaced">
-        <div class="oe_span6 text-justify oe_mt32">
-            <p>In this view Approver can see all the details of the approved requested supplier. And using the action button He can finalize the Supplier Request.</p>
-        </div>
-        <div class="oe_span6">
-            <img class="oe_picture oe_screenshot" src="images/approver_registration_form_view.png" alt="Approver Registration Form View">
-        </div>
-    </div>
-</section>
-<section class="oe_container oe_dark">
-    <div class="oe_row oe_spaced">
-        <div class="oe_span6">
-            <img class="oe_picture oe_screenshot" src="images/creating_rfp.png" alt="Creating RFP">
-        </div>
-        <div class="oe_span6 text-justify oe_mt32">
-            <p>Reviewer Creating RFP</p>
-        </div>
-    </div>
-</section>
-<section class="oe_container">
-    <div class="oe_row oe_spaced">
-        <div class="oe_span6 text-justify oe_mt32">
-            <p>Requester Creating RFP, These are the users who are company employee who dont have the Full reviewer access. but sometimes need to request for product.</p>
-        </div>
-        <div class="oe_span6">
-            <img class="oe_picture oe_screenshot" src="images/request_rfp.png" alt="Request RFP">
-        </div>
-    </div>
-</section>
-<section class="oe_container oe_dark">
-    <div class="oe_row oe_spaced">
-        <div class="oe_span6">
-            <img class="oe_picture oe_screenshot" src="images/requester_rfp_list.png" alt="Requester RFP List">
-        </div>
-        <div class="oe_span6 text-justify oe_mt32">
-            <p>Here are the list of the requested RFP</p>
-        </div>
-    </div>
-</section>
-<section class="oe_container">
-    <div class="oe_row oe_spaced">
-        <div class="oe_span6 text-justify oe_mt32">
-            <p>Approver can see all the Requested RFP</p>
-        </div>
-        <div class="oe_span6">
-            <img class="oe_picture oe_screenshot" src="images/rfp_approver_list_view.png" alt="RFP Approver List View">
-        </div>
-    </div>
-</section>
-<section class="oe_container oe_dark">
-    <div class="oe_row oe_spaced">
-        <div class="oe_span6">
-            <img class="oe_picture oe_screenshot" src="images/rfp_approver_form_view.png" alt="RFP Approver Form View">
-        </div>
-        <div class="oe_span6 text-justify oe_mt32">
-            <p>Approver can Accept the RFP and publish it in the portal</p>
-        </div>
-    </div>
-</section>
-<section class="oe_container">
-    <div class="oe_row oe_spaced">
-        <div class="oe_span6 text-justify oe_mt32">
-            <p>Supplier can see all the published RFP in the portal.</p>
-        </div>
-        <div class="oe_span6">
-            <img class="oe_picture oe_screenshot" src="images/published_rfp_portal.png" alt="Published RFP Portal">
-        </div>
-    </div>
-</section>
-<section class="oe_container oe_dark">
-    <div class="oe_row oe_spaced">
-        <div class="oe_span6">
-            <img class="oe_picture oe_screenshot" src="images/bid_rfp_portal.png" alt="Bid RFP Portal">
-        </div>
-        <div class="oe_span6 text-justify oe_mt32">
-            <p>Here the suppliers can Bid his price for the product.</p>
-        </div>
-    </div>
-</section>
-<section class="oe_container">
-    <div class="oe_row oe_spaced">
-        <div class="oe_span6 text-justify oe_mt32">
-            <p>Reviewer can see all the RFQ posted for the RFP. and can give a score and recommend the rfq for the next process. Also There is a system generated score which will help the reviewer to take a decision.</p>
-        </div>
-        <div class="oe_span6">
-            <img class="oe_picture oe_screenshot" src="images/reviewer_recommand_rfq.png" alt="Reviewer Recommend RFQ">
-        </div>
-    </div>
-</section>
-<section class="oe_container oe_dark">
-    <div class="oe_row oe_spaced">
-        <div class="oe_span6">
-            <img class="oe_picture oe_screenshot" src="images/approver_accept_rfq.png" alt="Approver Accept RFQ">
-        </div>
-        <div class="oe_span6 text-justify oe_mt32">
-            <p>In this image Approver can accept the rfq for the rfp. Approver can only accept one Rfq for one RFP. Here only recommended RFQ will be shown here. If approver accepts then an automatic PO will be created for the products.</p>
-        </div>
-    </div>
-</section>
-<section class="oe_container">
-    <div class="oe_row oe_spaced">
-        <div class="oe_span6 text-justify oe_mt32">
-            <p>Accepted Purchase Order</p>
-        </div>
-        <div class="oe_span6">
-            <img class="oe_picture oe_screenshot" src="images/accepted_PO.png" alt="Accepted Purchase Order">
-        </div>
-    </div>
-</section>
-<section class="oe_container oe_dark">
-    <div class="oe_row oe_spaced">
-        <div class="oe_span6">
-            <img class="oe_picture oe_screenshot" src="images/supplier_report.png" alt="Supplier Report">
-        </div>
-        <div class="oe_span6 text-justify oe_mt32">
-            <p>Here user can see the report of specific supplier and can also download the excel sheet</p>
-        </div>
-    </div>
-</section>
-<section class="oe_container">
-    <div class="oe_row oe_spaced">
-        <div class="oe_span6 text-justify oe_mt32">
-            <p>HTML report of the supplier</p>
-        </div>
-        <div class="oe_span6">
-            <img class="oe_picture oe_screenshot" src="images/supplier_report_html.png" alt="Supplier Report HTML">
-        </div>
-    </div>
-</section>
-<section class="oe_container oe_dark">
-    <div class="oe_row oe_spaced">
-        <div class="oe_span6">
-            <img class="oe_picture oe_screenshot" src="images/supplier_edit_profile.png" alt="Supplier Edit Profile">
-        </div>
-        <div class="oe_span6 text-justify oe_mt32">
-            <p>Here supplier can edit their profile. They cant directly edit the profile. They will create an edit request with the edited information then wait for the approval.</p>
-        </div>
-    </div>
-</section>
-<section class="oe_container">
-    <div class="oe_row oe_spaced">
-        <div class="oe_span6 text-justify oe_mt32">
-            <p>This is Dashboard where You can select any supplier and a time range. Then u can see all the details of the suppliers in a graphical views.</p>
-        </div>
-        <div class="oe_span6">
-            <img class="oe_picture oe_screenshot" src="images/supplier_dashboard.png" alt="Supplier Dashboard">
-        </div>
-    </div>
-</section>
-<section class="oe_container oe_dark">
-    <div class="oe_row oe_spaced">
-        <div>
-            <a href="https://drive.google.com/file/d/1ypMGmWZgqPTjoa7CYiOJ0FYsiTsONcVv/view?usp=sharing" target="_blank" class="btn">Learn more about VendorBid (Technical Documentation)</a>
-        </div>
-    </div>
-</section>
-
-<<<<<<< HEAD
-<!-- Installation Section -->
-<section class="oe_container oe_separator">
-    <div class="oe_row oe_spaced">
-        <h2 class="oe_slogan">How to Install</h2>
-        <h3 class="oe_slogan">Get Started with Vendor Bid</h3>
-        <div class="oe_span6 text-justify oe_mt32">
-            <ol>
-                <li>Visit the <a href="https://apps.odoo.com" target="_blank">Odoo Apps Store</a> and search for "Vendor Bid".</li>
-                <li>Click "Install" to add the module to your Odoo 18 instance.</li>
-                <li>Configure settings via the Odoo Apps menu.</li>
-                <li>Configure Outgoing Email server if not configured.</li>
-                <li>Start managing vendors and RFPs effortlessly!</li>
-            </ol>
-        </div>
-        <div class="oe_span6">
-            <img class="oe_picture oe_screenshot" src="images/supplier_registration.png" alt="Installation">
-=======
-    <!-- Installation Section -->
-    <section style="padding: 80px 0; background-color: #ffffff;">
-        <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-            <h2 style="font-size: 48px; font-weight: 800; margin-bottom: 40px; text-align: center; color: #1f2937;">How to Install</h2>
-            <ol style="max-width: 768px; margin: 0 auto; list-style: decimal; padding-left: 20px; font-size: 18px; color: #4b5563;">
-                <li style="margin-bottom: 16px;">Visit the <a href="https://apps.odoo.com" target="_blank" style="color: #2563eb; text-decoration: underline;">Odoo Apps Store</a> and search for "Vendor Bid".</li>
-                <li style="margin-bottom: 16px;">Click "Install" to add the module to your Odoo 18 instance.</li>
-                <li style="margin-bottom: 16px;">Configure settings via the Odoo Apps menu.</li>
-                <li style="margin-bottom: 16px;">Configure Outgoing Email server if not configured.</li>
-                <li style="margin-bottom: 16px;">Start managing vendors and RFPs effortlessly!</li>
-            </ol>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section style="padding: 80px 0; background-color: #2563eb; text-align: center;">
-        <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-            <h2 style="font-size: 48px; font-weight: 800; margin-bottom: 40px; color: #ffffff;">Get in Touch</h2>
-            <p style="font-size: 24px; margin-bottom: 40px; color: #ffffff;">Have questions or need support? Our team is here to help!</p>
-            <a href="mailto:support@vendorbid.com" style="background: linear-gradient(90deg, #3b82f6, #1e40af); color: #ffffff; padding: 12px 24px; border-radius: 50px; text-decoration: none; font-size: 18px; font-weight: 600; display: inline-block;">Contact Support</a>
->>>>>>> 5f21120 (Added)
-        </div>
-    </div>
-</section>
-
-<<<<<<< HEAD
-<!-- Contact Section -->
-<section class="oe_container">
-    <div class="oe_row oe_spaced">
-        <h2 class="oe_slogan">Get in Touch</h2>
-        <h3 class="oe_slogan">Support for Vendor Bid</h3>
-        <div class="oe_span6 text-justify oe_mt32">
-            <p>Have questions or need support? Our team is here to help!</p>
-            <a href="mailto:support@yourwebsite.com" class="btn">Contact Support</a>
-        </div>
-        <div class="oe_span6">
-            <img class="oe_picture oe_screenshot" src="images/supplier_dashboard.png" alt="Contact Support">
-        </div>
-    </div>
-</section>
-=======
-    <!-- Footer -->
-    <footer style="padding: 80px 0; background-color: #1f2937; color: #ffffff; text-align: center;">
-        <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-            <p style="font-size: 18px; margin-bottom: 16px;">© 2025 Vendor Bid. All rights reserved.</p>
-            <div style="display: flex; justify-content: center; gap: 24px; margin-bottom: 16px;">
-                <a href="https://twitter.com/vendorbid" style="display: inline-block;">
-                    <i class="fab fa-twitter" style="font-size: 24px; color: #2563eb;"></i>
-                </a>
-                <a href="https://linkedin.com/company/vendorbid" style="display: inline-block;">
-                    <i class="fab fa-linkedin" style="font-size: 24px; color: #2563eb;"></i>
-                </a>
-            </div>
-            <div style="font-size: 18px;">
-                <a href="https://vendorbid.com" style="color: #2563eb; text-decoration: underline; margin: 0 8px;">Visit Our Website</a> | 
-                <a href="#privacy" style="color: #2563eb; text-decoration: underline; margin: 0 8px;">Privacy Policy</a>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Inline Animation for Hero Section -->
-    <style>
-        @keyframes pulse {
-            0% { transform: scale(1); opacity: 0.5; }
-            50% { transform: scale(1.2); opacity: 0.3; }
-            100% { transform: scale(1); opacity: 0.5; }
-        }
-        a:hover {
-            transform: scale(1.05);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-        }
-        @media (max-width: 768px) {
-            h1 { font-size: 36px; }
-            p { font-size: 20px; }
-            section { padding: 48px 0; }
-            div[style*="flex: 1 1 300px"] { flex: 1 1 100%; }
-        }
-        @media (max-width: 576px) {
-            div[style*="max-width: 1200px"] { padding: 0 10px; }
-        }
-    </style>
->>>>>>> 5f21120 (Added)
-</body>
-</html>
+        </style>
+    </body>
+    </html>
