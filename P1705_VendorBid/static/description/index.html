@@ -7,6 +7,66 @@
         <title>Vendor Bid - Odoo 18 Apps Store</title>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <style>
+            .features-section {
+  padding: 80px 0;
+  background-color: #f3f4f6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-title {
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 40px;
+  text-align: center;
+  color: #1f2937;
+}
+
+.features-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+}
+
+.feature-card {
+  flex: 1 1 300px;
+  background: #f9fafb;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card h3 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #1f2937;
+}
+
+.feature-card p {
+  font-size: 16px;
+  color: #4b5563;
+}
+
+.feature-card ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 8px;
+}
+
+.feature-card ul li {
+  padding: 8px 0;
+  font-size: 16px;
+  color: #4b5563;
+}
+
+        </style>
     </head>
     <body style="font-family: 'Poppins', sans-serif; background-color: #f0f4f8; line-height: 1.6; margin: 0; padding: 0;">
         <!-- Hero Section -->
@@ -32,8 +92,12 @@
         <!-- Features Section -->
         <section style="padding: 80px 0; background-color: #f3f4f6;">
             <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-                <h2 style="font-size: 48px; font-weight: 800; margin-bottom: 40px; text-align: center; color: #1f2937;">Explore Vendor Bid Features</h2>
+                <h2 style="font-size: 48px; font-weight: 800; margin-bottom: 40px; text-align: center; color: #1f2937;">
+                    Explore Vendor Bid Features
+                </h2>
                 <div style="display: flex; flex-wrap: wrap; gap: 24px; justify-content: center;">
+        
+                    <!-- Card 1 -->
                     <div style="flex: 1 1 300px; background: #f9fafb; padding: 24px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
                         <h3 style="font-size: 24px; font-weight: 600; margin-bottom: 8px; color: #1f2937;">Email Verification with OTP</h3>
                         <p style="font-size: 16px; color: #4b5563;">Securely validate vendor email addresses with OTP-based verification, ensuring a trusted supplier base.</p>
@@ -43,6 +107,8 @@
                             <li style="padding: 8px 0; font-size: 16px; color: #4b5563;">Navigates to registration form upon successful OTP</li>
                         </ul>
                     </div>
+        
+                    <!-- Card 2 -->
                     <div style="flex: 1 1 300px; background: #f9fafb; padding: 24px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
                         <h3 style="font-size: 24px; font-weight: 600; margin-bottom: 8px; color: #1f2937;">Comprehensive Registration Form</h3>
                         <p style="font-size: 16px; color: #4b5563;">A robust, five-section form for vendor onboarding, covering company details, financials, and more.</p>
@@ -53,6 +119,8 @@
                             <li style="padding: 8px 0; font-size: 16px; color: #4b5563;">Non-expired certifications and document uploads</li>
                         </ul>
                     </div>
+        
+                    <!-- Card 3 -->
                     <div style="flex: 1 1 300px; background: #f9fafb; padding: 24px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
                         <h3 style="font-size: 24px; font-weight: 600; margin-bottom: 8px; color: #1f2937;">Two-Step Verification Process</h3>
                         <p style="font-size: 16px; color: #4b5563;">Secure approval workflow with initial review and final approval for qualified vendors.</p>
@@ -62,6 +130,8 @@
                             <li style="padding: 8px 0; font-size: 16px; color: #4b5563;">Email notifications with login credentials</li>
                         </ul>
                     </div>
+        
+                    <!-- Card 4 -->
                     <div style="flex: 1 1 300px; background: #f9fafb; padding: 24px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
                         <h3 style="font-size: 24px; font-weight: 600; margin-bottom: 8px; color: #1f2937;">RFP Creation & Quotation Submission</h3>
                         <p style="font-size: 16px; color: #4b5563;">Streamlined RFP creation with a supplier portal for quotation submission.</p>
@@ -71,6 +141,8 @@
                             <li style="padding: 8px 0; font-size: 16px; color: #4b5563;">Automatic RFQ creation and notifications</li>
                         </ul>
                     </div>
+        
+                    <!-- Card 5 -->
                     <div style="flex: 1 1 300px; background: #f9fafb; padding: 24px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
                         <h3 style="font-size: 24px; font-weight: 600; margin-bottom: 8px; color: #1f2937;">RFP Publishing</h3>
                         <p style="font-size: 16px; color: #4b5563;">Publish RFPs to a portal for supplier access and quotation submission.</p>
@@ -80,6 +152,8 @@
                             <li style="padding: 8px 0; font-size: 16px; color: #4b5563;">Automatic RFQ creation and notifications</li>
                         </ul>
                     </div>
+        
+                    <!-- Card 6 -->
                     <div style="flex: 1 1 300px; background: #f9fafb; padding: 24px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
                         <h3 style="font-size: 24px; font-weight: 600; margin-bottom: 8px; color: #1f2937;">Approval Process</h3>
                         <p style="font-size: 16px; color: #4b5563;">Comprehensive process from RFP creation to supplier bidding and RFQ approval.</p>
@@ -89,6 +163,8 @@
                             <li style="padding: 8px 0; font-size: 16px; color: #4b5563;">Reviewer scores RFQs, approver selects one</li>
                         </ul>
                     </div>
+        
+                    <!-- Card 7 -->
                     <div style="flex: 1 1 300px; background: #f9fafb; padding: 24px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
                         <h3 style="font-size: 24px; font-weight: 600; margin-bottom: 8px; color: #1f2937;">RFP Reporting</h3>
                         <p style="font-size: 16px; color: #4b5563;">Generate detailed Excel and HTML reports for RFPs, filtered by date and supplier.</p>
@@ -98,23 +174,23 @@
                             <li style="padding: 8px 0; font-size: 16px; color: #4b5563;">Includes supplier details and RFP status</li>
                         </ul>
                     </div>
+        
+                    <!-- Card 8 -->
                     <div style="flex: 1 1 300px; background: #f9fafb; padding: 24px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
                         <h3 style="font-size: 24px; font-weight: 600; margin-bottom: 8px; color: #1f2937;">RFP Dashboard</h3>
                         <p style="font-size: 16px; color: #4b5563;">Dynamic dashboard with graphs for approved RFQs and product breakdowns.</p>
                         <ul style="list-style: none; padding: 0; margin-top: 8px;">
                             <li style="padding: 8px 0; font-size: 16px; color: #4b5563;">Metrics for approved RFQs and totals</li>
-                            <li style="padding: 8px 0; font-size: 16px; color: #4b5563;">Product-wise breakdown charts</li>
-                            <li style="padding: 8px 0; font-size: 16px; color: #4b5563;">Real-time data visualization</li>
+                            <li style="padding: 8px 0; font-size: 16px; color: #4b5563;">Graphical breakdown by product and category</li>
+                            <li style="padding: 8px 0; font-size: 16px; color: #4b5563;">Interactive OWL component integration</li>
                         </ul>
                     </div>
-                </div>
-                <div style="text-align: center; margin-top: 40px;">
-                    <a href="https://www.youtube.com/watch?v=yA4NLwOLZms" target="_blank" style="background: linear-gradient(90deg, #3b82f6, #1e40af); color: #ffffff; padding: 12px 24px; border-radius: 50px; text-decoration: none; font-size: 18px; font-weight: 600; display: inline-block;">
-                        <i class="fa fa-youtube" style="margin-right: 10px;"></i> Watch on YouTube
-                    </a>
+        
                 </div>
             </div>
         </section>
+        
+          
  
         <!-- Workflow Section -->
         <section style="padding: 80px 0; background-color: #ffffff;">
