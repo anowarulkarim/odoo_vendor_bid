@@ -20,7 +20,7 @@
     # any module necessary for this one to work correctly
     'depends': ['purchase', 'website','contacts'],
     'license': 'LGPL-3',
-
+    'images': ['static/description/banner.gif'],
     # always loaded
     'data': [
         'security/supplies_security.xml',
