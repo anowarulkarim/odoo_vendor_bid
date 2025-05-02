@@ -4,58 +4,139 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vendor Bid - Odoo Apps Store</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', Arial, sans-serif;
             margin: 0;
             padding: 0;
             line-height: 1.6;
+            background-color: #f8f9fa;
         }
-        .container {
-            max-width: 1000px;
+        .oe_container {
+            padding: 60px 0;
+            text-align: center;
+            background-color: #ffffff;
+        }
+        .oe_row {
+            max-width: 1200px;
             margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+        .oe_spaced {
+            margin-bottom: 30px;
+        }
+        .oe_slogan {
+            margin-bottom: 20px;
+            color: #875A7B;
+        }
+        .oe_slogan:first-child {
+            font-size: 32px;
+            font-weight: 700;
+        }
+        .oe_slogan:nth-child(2) {
+            font-size: 20px;
+            font-weight: 400;
+            color: #333;
+        }
+        .oe_span6 {
+            width: 50%;
             padding: 20px;
+            box-sizing: border-box;
         }
-        section {
-            margin-bottom: 40px;
-        }
-        h1, h2, h3, h4 {
-            margin-bottom: 20px;
-        }
-        p {
-            margin-bottom: 20px;
-        }
-        img {
+        .oe_picture.oe_screenshot {
             width: 100%;
-            max-width: 80%; /* Relative to container width */
+            max-width: 80%; /* Relative to container */
             height: auto;
+            margin: 0 auto;
             display: block;
-            margin: 0 auto 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        .oe_mt32 {
+            margin-top: 32px;
+        }
+        .oe_mb32 {
+            margin-bottom: 32px;
+        }
+        .text-justify {
+            text-align: justify;
+        }
+        .oe_dark {
+            background-color: #f5f5f5;
         }
         ul, ol {
-            margin-bottom: 20px;
-            padding-left: 20px;
+            margin: 0 0 20px 20px;
+            text-align: left;
+            list-style-position: outside;
         }
         li {
-            margin-bottom: 10px;
+            margin-bottom: 12px;
+            color: #444;
         }
         a {
-            color: blue;
+            color: #875A7B;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+        a:hover {
+            color: #5e3c58;
             text-decoration: underline;
         }
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #875A7B;
+            color: #ffffff;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.2s;
+        }
+        .btn:hover {
+            background-color: #5e3c58;
+            color: #ffffff;
+        }
         .dashboard-menu {
-            margin-bottom: 20px;
+            margin-bottom: 30px;
+            text-align: center;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
         .dashboard-menu-item {
-            padding: 10px;
+            padding: 12px 20px;
             margin: 5px;
             display: inline-block;
             cursor: pointer;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f8f9fa;
+            transition: background-color 0.2s, border-color 0.2s;
+        }
+        .dashboard-menu-item:hover {
+            background-color: #e9ecef;
+            border-color: #875A7B;
+        }
+        input[name="dashboard-section"]:checked + label .dashboard-menu-item {
+            background-color: #875A7B;
+            color: #ffffff;
+            border-color: #875A7B;
         }
         .dashboard-content {
             display: none;
             padding: 20px;
-            border: 1px solid #ccc;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #ffffff;
+            text-align: left;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
         input[name="dashboard-section"] {
             display: none;
@@ -63,41 +144,71 @@
         input[name="dashboard-section"]:checked ~ .dashboard-content {
             display: block;
         }
+        .oe_separator {
+            border-top: 1px solid #ddd;
+            margin: 60px 0;
+        }
         @media (max-width: 768px) {
-            img {
-                max-width: 90%; /* Slightly larger on smaller screens */
+            .oe_span6 {
+                width: 100%;
+            }
+            .oe_picture.oe_screenshot {
+                max-width: 90%;
+            }
+            .oe_slogan:first-child {
+                font-size: 28px;
+            }
+            .oe_slogan:nth-child(2) {
+                font-size: 18px;
             }
         }
         @media (max-width: 576px) {
-            img {
-                max-width: 95%; /* Almost full width on very small screens */
+            .oe_picture.oe_screenshot {
+                max-width: 95%;
+            }
+            .oe_container {
+                padding: 40px 0;
+            }
+            .oe_row {
+                padding: 0 10px;
             }
         }
     </style>
 </head>
 <body>
 <!-- Hero Section -->
-<section>
-    <div class="container">
-        <img src="images/icon.png" alt="Vendor Bid Logo">
-        <h1>Vendor Bid</h1>
-        <p>Streamline Procurement with Odoo 18’s Ultimate Vendor Management Solution</p>
-        <a href="" target="_blank">Get It on Odoo Apps Store</a>
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <h2 class="oe_slogan">Vendor Bid</h2>
+        <h3 class="oe_slogan">Streamline Procurement with Odoo 18’s Ultimate Vendor Management Solution</h3>
+        <div>
+            <img class="oe_picture oe_screenshot" src="images/icon.png" alt="Vendor Bid Logo">
+        </div>
+        <div>
+            <a href="" target="_blank" class="btn">Get It on Odoo Apps Store</a>
+        </div>
     </div>
 </section>
 
 <!-- About Section -->
-<section id="about">
-    <div class="container">
-        <h2>About Vendor Bid</h2>
-        <p>Vendor Bid is a cutting-edge Odoo 18 module designed to revolutionize supply chain management. From secure email verification and supplier registration to RFP creation, quotation management, and advanced analytics, it empowers businesses with seamless, data-driven procurement workflows.</p>
+<section class="oe_container oe_dark">
+    <div class="oe_row oe_spaced">
+        <h2 class="oe_slogan">About Vendor Bid</h2>
+        <h3 class="oe_slogan">Revolutionize Supply Chain Management</h3>
+        <div class="oe_span6 text-justify oe_mt32">
+            <p>Vendor Bid is a cutting-edge Odoo 18 module designed to revolutionize supply chain management. From secure email verification and supplier registration to RFP creation, quotation management, and advanced analytics, it empowers businesses with seamless, data-driven procurement workflows.</p>
+        </div>
+        <div class="oe_span6">
+            <img class="oe_picture oe_screenshot" src="images/supplier_dashboard.png" alt="Supplier Dashboard">
+        </div>
     </div>
 </section>
 
 <!-- Dashboard Section -->
-<section id="dashboard">
-    <div class="container">
-        <h2>Explore Vendor Bid Features</h2>
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <h2 class="oe_slogan">Explore Vendor Bid Features</h2>
+        <h3 class="oe_slogan">Comprehensive Procurement Tools</h3>
         <div class="dashboard-menu">
             <div>
                 <input type="radio" name="dashboard-section" id="email-verification-radio" checked>
@@ -109,9 +220,10 @@
                     <p>Securely validate vendor email addresses with OTP-based verification. Only new, non-blacklisted emails are accepted, ensuring a trusted supplier base.</p>
                     <ul>
                         <li>Validates email uniqueness and blacklist status</li>
-                        <li>Sends OTP to valid emails for verification</li>
+                        <li>Sends OTP to valid IPT emails for verification</li>
                         <li>Navigates to registration form upon successful OTP</li>
                     </ul>
+                    <img class="oe_picture oe_screenshot" src="images/login_email.png" alt="Email Verification">
                 </div>
             </div>
             <div>
@@ -129,6 +241,7 @@
                         <li>Non-expired certifications and document uploads (≤1MB)</li>
                         <li>Automatic validation with user-friendly error messages</li>
                     </ul>
+                    <img class="oe_picture oe_screenshot" src="images/supplier_registration.png" alt="Registration Form">
                 </div>
             </div>
             <div>
@@ -145,6 +258,7 @@
                         <li>Email notifications with login credentials for suppliers</li>
                         <li>Supports list, form, Kanban, and search views</li>
                     </ul>
+                    <img class="oe_picture oe_screenshot" src="images/reviewer_registration_form_view.png" alt="Two-Step Verification">
                 </div>
             </div>
             <div>
@@ -162,6 +276,7 @@
                         <li>Scoring based on delivery, charges, and terms</li>
                         <li>Workflows for draft, submitted, approved, and closed states</li>
                     </ul>
+                    <img class="oe_picture oe_screenshot" src="images/creating_rfp.png" alt="RFP Creation">
                 </div>
             </div>
             <div>
@@ -177,6 +292,7 @@
                         <li>Suppliers submit quotations via portal</li>
                         <li>Automatic RFQ creation and reviewer notifications</li>
                     </ul>
+                    <img class="oe_picture oe_screenshot" src="images/published_rfp_portal.png" alt="RFP Publish">
                 </div>
             </div>
             <div>
@@ -193,7 +309,7 @@
                         <li>Approver approved</li>
                         <li>RFP post in portal</li>
                     </ul>
-                    <p>After RFP post in portal All the registered supplier will get email. Then they can bid the product which are in the RFP. And then submit. A supplier can submit more than one bid. When The approver close the rfp time then RFQ approval process start.</p>
+                    <p class="oe_mb32">After RFP post in portal All the registered supplier will get email. Then they can bid the product which are in the RFP. And then submit. A supplier can submit more than one bid. When The approver close the rfp time then RFQ approval process start.</p>
                     <h4>RFQ Approval Process</h4>
                     <ul>
                         <li>Reviewer recommends and gives a score 1-10 to all the recommended.</li>
@@ -201,6 +317,7 @@
                         <li>Approver approves one rfq. He can not approve more than one RFQ for one RFP.</li>
                         <li>Automatically creates a new purchase order</li>
                     </ul>
+                    <img class="oe_picture oe_screenshot" src="images/approver_accept_rfq.png" alt="Approval Process">
                 </div>
             </div>
             <div>
@@ -216,6 +333,7 @@
                         <li>HTML previews for web-based reporting</li>
                         <li>Includes supplier details, RFP status, and product lines</li>
                     </ul>
+                    <img class="oe_picture oe_screenshot" src="images/supplier_report.png" alt="RFP Reporting">
                 </div>
             </div>
             <div>
@@ -231,6 +349,7 @@
                         <li>Product-wise breakdown charts</li>
                         <li>Real-time data visualization</li>
                     </ul>
+                    <img class="oe_picture oe_screenshot" src="images/supplier_dashboard.png" alt="RFP Dashboard">
                 </div>
             </div>
         </div>
@@ -238,143 +357,309 @@
 </section>
 
 <!-- Workflow Section -->
-<section id="workflow">
-    <div class="container">
-        <h2>See the Workflow in Action</h2>
-        <img src="images/workflow.gif" alt="Vendor Portal Workflow">
+<section class="oe_container oe_dark">
+    <div class="oe_row oe_spaced">
+        <h2 class="oe_slogan">See the Workflow in Action</h2>
+        <h3 class="oe_slogan">Visualize the Procurement Process</h3>
+        <div>
+            <img class="oe_picture oe_screenshot" src="images/workflow.gif" alt="Vendor Portal Workflow">
+        </div>
     </div>
 </section>
 
 <!-- Screenshots Section -->
-<section id="screenshots">
-    <div class="container">
-        <h2>See It in Action</h2>
-        <div>
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <h2 class="oe_slogan">See It in Action</h2>
+        <h3 class="oe_slogan">Screenshots of Vendor Bid Features</h3>
+        <div class="oe_span6 text-justify oe_mt32">
             <p>This is Input email page, Where supplier put his email. And an OTP will be sent to the mail.</p>
-            <img src="images/login_email.png" alt="Vendor Portal">
         </div>
-        <div>
+        <div class="oe_span6">
+            <img class="oe_picture oe_screenshot" src="images/login_email.png" alt="Vendor Portal">
+        </div>
+    </div>
+</section>
+<section class="oe_container oe_dark">
+    <div class="oe_row oe_spaced">
+        <div class="oe_span6">
+            <img class="oe_picture oe_screenshot" src="images/otp.png" alt="OTP Page">
+        </div>
+        <div class="oe_span6 text-justify oe_mt32">
             <p>This is the OTP page where user supplier input the OTP.</p>
-            <img src="images/otp.png" alt="OTP Page">
         </div>
-        <div>
+    </div>
+</section>
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <div class="oe_span6 text-justify oe_mt32">
             <p>Supplier Registration Form part 1</p>
-            <img src="images/supplier_registration.png" alt="Supplier Registration Part 1">
         </div>
-        <div>
+        <div class="oe_span6">
+            <img class="oe_picture oe_screenshot" src="images/supplier_registration.png" alt="Supplier Registration Part 1">
+        </div>
+    </div>
+</section>
+<section class="oe_container oe_dark">
+    <div class="oe_row oe_spaced">
+        <div class="oe_span6">
+            <img class="oe_picture oe_screenshot" src="images/supplier_registration2.png" alt="Supplier Registration Part 2">
+        </div>
+        <div class="oe_span6 text-justify oe_mt32">
             <p>Supplier Registration Form part 2</p>
-            <img src="images/supplier_registration2.png" alt="Supplier Registration Part 2">
         </div>
-        <div>
+    </div>
+</section>
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <div class="oe_span6 text-justify oe_mt32">
             <p>Supplier Registration Form part 3</p>
-            <img src="images/supplier_registration3.png" alt="Supplier Registration Part 3">
         </div>
-        <div>
+        <div class="oe_span6">
+            <img class="oe_picture oe_screenshot" src="images/supplier_registration3.png" alt="Supplier Registration Part 3">
+        </div>
+    </div>
+</section>
+<section class="oe_container oe_dark">
+    <div class="oe_row oe_spaced">
+        <div class="oe_span6">
+            <img class="oe_picture oe_screenshot" src="images/supplier_registration4.png" alt="Supplier Registration Part 4">
+        </div>
+        <div class="oe_span6 text-justify oe_mt32">
             <p>Supplier Registration Form part 4</p>
-            <img src="images/supplier_registration4.png" alt="Supplier Registration Part 4">
         </div>
-        <div>
+    </div>
+</section>
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <div class="oe_span6 text-justify oe_mt32">
             <p>Supplier Registration Form part 5</p>
-            <img src="images/supplier_registration5.png" alt="Supplier Registration Part 5">
         </div>
-        <div>
+        <div class="oe_span6">
+            <img class="oe_picture oe_screenshot" src="images/supplier_registration5.png" alt="Supplier Registration Part 5">
+        </div>
+    </div>
+</section>
+<section class="oe_container oe_dark">
+    <div class="oe_row oe_spaced">
+        <div class="oe_span6">
+            <img class="oe_picture oe_screenshot" src="images/reviewer_registration_list_view.png" alt="Reviewer Registration List View">
+        </div>
+        <div class="oe_span6 text-justify oe_mt32">
             <p>In this page The user will see all the submitted Supplier Request</p>
-            <img src="images/reviewer_registration_list_view.png" alt="Reviewer Registration List View">
         </div>
-        <div>
+    </div>
+</section>
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <div class="oe_span6 text-justify oe_mt\(\) {
+            <img class="oe_picture oe_screenshot" src="images/reviewer_registration_form_view.png" alt="Reviewer Registration Form View">
+        </div>
+        <div class="oe_span6 text-justify oe_mt32">
             <p>In this view Reviewer can see all the details of the requested supplier. And using the action button can approve, reject or Blacklist the Email.</p>
-            <img src="images/reviewer_registration_form_view.png" alt="Reviewer Registration Form View">
         </div>
-        <div>
+    </div>
+</section>
+<section class="oe_container oe_dark">
+    <div class="oe_row oe_spaced">
+        <div class="oe_span6">
+            <img class="oe_picture oe_screenshot" src="images/approver_registration_list_view.png" alt="Approver Registration List View">
+        </div>
+        <div class="oe_span6 text-justify oe_mt32">
             <p>In this view Approver can see all the approved supplier request by the Reviewer.</p>
-            <img src="images/approver_registration_list_view.png" alt="Approver Registration List View">
         </div>
-        <div>
+    </div>
+</section>
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <div class="oe_span6 text-justify oe_mt32">
             <p>In this view Approver can see all the details of the approved requested supplier. And using the action button He can finalize the Supplier Request.</p>
-            <img src="images/approver_registration_form_view.png" alt="Approver Registration Form View">
         </div>
-        <div>
+        <div class="oe_span6">
+            <img class="oe_picture oe_screenshot" src="images/approver_registration_form_view.png" alt="Approver Registration Form View">
+        </div>
+    </div>
+</section>
+<section class="oe_container oe_dark">
+    <div class="oe_row oe_spaced">
+        <div class="oe_span6">
+            <img class="oe_picture oe_screenshot" src="images/creating_rfp.png" alt="Creating RFP">
+        </div>
+        <div class="oe_span6 text-justify oe_mt32">
             <p>Reviewer Creating RFP</p>
-            <img src="images/creating_rfp.png" alt="Creating RFP">
         </div>
-        <div>
+    </div>
+</section>
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <div class="oe_span6 text-justify oe_mt32">
             <p>Requester Creating RFP, These are the users who are company employee who dont have the Full reviewer access. but sometimes need to request for product.</p>
-            <img src="images/request_rfp.png" alt="Request RFP">
         </div>
-        <div>
+        <div class="oe_span6">
+            <img class="oe_picture oe_screenshot" src="images/request_rfp.png" alt="Request RFP">
+        </div>
+    </div>
+</section>
+<section class="oe_container oe_dark">
+    <div class="oe_row oe_spaced">
+        <div class="oe_span6">
+            <img class="oe_picture oe_screenshot" src="images/requester_rfp_list.png" alt="Requester RFP List">
+        </div>
+        <div class="oe_span6 text-justify oe_mt32">
             <p>Here are the list of the requested RFP</p>
-            <img src="images/requester_rfp_list.png" alt="Requester RFP List">
         </div>
-        <div>
+    </div>
+</section>
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <div class="oe_span6 text-justify oe_mt32">
             <p>Approver can see all the Requested RFP</p>
-            <img src="images/rfp_approver_list_view.png" alt="RFP Approver List View">
         </div>
-        <div>
+        <div class="oe_span6">
+            <img class="oe_picture oe_screenshot" src="images/rfp_approver_list_view.png" alt="RFP Approver List View">
+        </div>
+    </div>
+</section>
+<section class="oe_container oe_dark">
+    <div class="oe_row oe_spaced">
+        <div class="oe_span6">
+            <img class="oe_picture oe_screenshot" src="images/rfp_approver_form_view.png" alt="RFP Approver Form View">
+        </div>
+        <div class="oe_span6 text-justify oe_mt32">
             <p>Approver can Accept the RFP and publish it in the portal</p>
-            <img src="images/rfp_approver_form_view.png" alt="RFP Approver Form View">
         </div>
-        <div>
+    </div>
+</section>
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <div class="oe_span6 text-justify oe_mt32">
             <p>Supplier can see all the published RFP in the portal.</p>
-            <img src="images/published_rfp_portal.png" alt="Published RFP Portal">
         </div>
-        <div>
+        <div class="oe_span6">
+            <img class="oe_picture oe_screenshot" src="images/published_rfp_portal.png" alt="Published RFP Portal">
+        </div>
+    </div>
+</section>
+<section class="oe_container oe_dark">
+    <div class="oe_row oe_spaced">
+        <div class="oe_span6">
+            <img class="oe_picture oe_screenshot" src="images/bid_rfp_portal.png" alt="Bid RFP Portal">
+        </div>
+        <div class="oe_span6 text-justify oe_mt32">
             <p>Here the suppliers can Bid his price for the product.</p>
-            <img src="images/bid_rfp_portal.png" alt="Bid RFP Portal">
         </div>
-        <div>
+    </div>
+</section>
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <div class="oe_span6 text-justify oe_mt32">
             <p>Reviewer can see all the RFQ posted for the RFP. and can give a score and recommend the rfq for the next process. Also There is a system generated score which will help the reviewer to take a decision.</p>
-            <img src="images/reviewer_recommand_rfq.png" alt="Reviewer Recommend RFQ">
         </div>
-        <div>
+        <div class="oe_span6">
+            <img class="oe_picture oe_screenshot" src="images/reviewer_recommand_rfq.png" alt="Reviewer Recommend RFQ">
+        </div>
+    </div>
+</section>
+<section class="oe_container oe_dark">
+    <div class="oe_row oe_spaced">
+        <div class="oe_span6">
+            <img class="oe_picture oe_screenshot" src="images/approver_accept_rfq.png" alt="Approver Accept RFQ">
+        </div>
+        <div class="oe_span6 text-justify oe_mt32">
             <p>In this image Approver can accept the rfq for the rfp. Approver can only accept one Rfq for one RFP. Here only recommended RFQ will be shown here. If approver accepts then an automatic PO will be created for the products.</p>
-            <img src="images/approver_accept_rfq.png" alt="Approver Accept RFQ">
         </div>
-        <div>
+    </div>
+</section>
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <div class="oe_span6 text-justify oe_mt32">
             <p>Accepted Purchase Order</p>
-            <img src="images/accepted_PO.png" alt="Accepted Purchase Order">
         </div>
-        <div>
+        <div class="oe_span6">
+            <img class="oe_picture oe_screenshot" src="images/accepted_PO.png" alt="Accepted Purchase Order">
+        </div>
+    </div>
+</section>
+<section class="oe_container oe_dark">
+    <div class="oe_row oe_spaced">
+        <div class="oe_span6">
+            <img class="oe_picture oe_screenshot" src="images/supplier_report.png" alt="Supplier Report">
+        </div>
+        <div class="oe_span6 text-justify oe_mt32">
             <p>Here user can see the report of specific supplier and can also download the excel sheet</p>
-            <img src="images/supplier_report.png" alt="Supplier Report">
         </div>
-        <div>
+    </div>
+</section>
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <div class="oe_span6 text-justify oe_mt32">
             <p>HTML report of the supplier</p>
-            <img src="images/supplier_report_html.png" alt="Supplier Report HTML">
         </div>
-        <div>
+        <div class="oe_span6">
+            <img class="oe_picture oe_screenshot" src="images/supplier_report_html.png" alt="Supplier Report HTML">
+        </div>
+    </div>
+</section>
+<section class="oe_container oe_dark">
+    <div class="oe_row oe_spaced">
+        <div class="oe_span6">
+            <img class="oe_picture oe_screenshot" src="images/supplier_edit_profile.png" alt="Supplier Edit Profile">
+        </div>
+        <div class="oe_span6 text-justify oe_mt32">
             <p>Here supplier can edit their profile. They cant directly edit the profile. They will create an edit request with the edited information then wait for the approval.</p>
-            <img src="images/supplier_edit_profile.png" alt="Supplier Edit Profile">
         </div>
-        <div>
+    </div>
+</section>
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <div class="oe_span6 text-justify oe_mt32">
             <p>This is Dashboard where You can select any supplier and a time range. Then u can see all the details of the suppliers in a graphical views.</p>
-            <img src="images/supplier_dashboard.png" alt="Supplier Dashboard">
         </div>
+        <div class="oe_span6">
+            <img class="oe_picture oe_screenshot" src="images/supplier_dashboard.png" alt="Supplier Dashboard">
+        </div>
+    </div>
+</section>
+<section class="oe_container oe_dark">
+    <div class="oe_row oe_spaced">
         <div>
-            <a href="https://drive.google.com/file/d/1ypMGmWZgqPTjoa7CYiOJ0FYsiTsONcVv/view?usp=sharing" target="_blank">Learn more about VendorBid (Technical Documentation)</a>
+            <a href="https://drive.google.com/file/d/1ypMGmWZgqPTjoa7CYiOJ0FYsiTsONcVv/view?usp=sharing" target="_blank" class="btn">Learn more about VendorBid (Technical Documentation)</a>
         </div>
     </div>
 </section>
 
 <!-- Installation Section -->
-<section id="installation">
-    <div class="container">
-        <h2>How to Install</h2>
-        <ol>
-            <li>Visit the <a href="https://apps.odoo.com" target="_blank">Odoo Apps Store</a> and search for "Vendor Bid".</li>
-            <li>Click "Install" to add the module to your Odoo 18 instance.</li>
-            <li>Configure settings via the Odoo Apps menu.</li>
-            <li>Configure Outgoing Email server if not configured.</li>
-            <li>Start managing vendors and RFPs effortlessly!</li>
-        </ol>
+<section class="oe_container oe_separator">
+    <div class="oe_row oe_spaced">
+        <h2 class="oe_slogan">How to Install</h2>
+        <h3 class="oe_slogan">Get Started with Vendor Bid</h3>
+        <div class="oe_span6 text-justify oe_mt32">
+            <ol>
+                <li>Visit the <a href="https://apps.odoo.com" target="_blank">Odoo Apps Store</a> and search for "Vendor Bid".</li>
+                <li>Click "Install" to add the module to your Odoo 18 instance.</li>
+                <li>Configure settings via the Odoo Apps menu.</li>
+                <li>Configure Outgoing Email server if not configured.</li>
+                <li>Start managing vendors and RFPs effortlessly!</li>
+            </ol>
+        </div>
+        <div class="oe_span6">
+            <img class="oe_picture oe_screenshot" src="images/supplier_registration.png" alt="Installation">
+        </div>
     </div>
 </section>
 
 <!-- Contact Section -->
-<section id="contact">
-    <div class="container">
-        <h2>Get in Touch</h2>
-        <p>Have questions or need support? Our team is here to help!</p>
-        <a href="mailto:support@yourwebsite.com">Contact Support</a>
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <h2 class="oe_slogan">Get in Touch</h2>
+        <h3 class="oe_slogan">Support for Vendor Bid</h3>
+        <div class="oe_span6 text-justify oe_mt32">
+            <p>Have questions or need support? Our team is here to help!</p>
+            <a href="mailto:support@yourwebsite.com" class="btn">Contact Support</a>
+        </div>
+        <div class="oe_span6">
+            <img class="oe_picture oe_screenshot" src="images/supplier_dashboard.png" alt="Contact Support">
+        </div>
     </div>
 </section>
 </body>
