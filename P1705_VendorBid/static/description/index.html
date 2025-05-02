@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendor Bid - Odoo Apps Store</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            background-color: #f0f4f8;
+        }
+        .hero-section {
+            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 70%);
+            animation: pulse 10s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.2); opacity: 0.3; }
+            100% { transform: scale(1); opacity: 0.5; }
+        }
+        .screenshot-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .dashboard-card {
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            background: linear-gradient(135deg, #ffffff, #e5e7eb);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .dashboard-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+        }
+        .dashboard-content {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .dashboard-content.active {
+            display: block;
+            opacity: 1;
+        }
+        .carousel-item {
+            display: none;
+        }
+        .carousel-item.active {
+            display: block;
+        }
+        .btn-gradient {
+            background: linear-gradient(90deg, #3b82f6, #1e40af);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .btn-gradient:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+        .section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .social-icon {
+            transition: transform 0.2s;
+        }
+        .social-icon:hover {
+            transform: scale(1.2);
+        }
+        .future-improvements {
+            background: linear-gradient(135deg, #1e40af, #3b82f6);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<!-- Hero Section -->
+<section class="hero-section text-white py-24">
+    <div class="container mx-auto px-6 text-center relative z-10">
+        <img src="icon.png" alt="Vendor Bid Logo" class="h-16 mx-auto mb-6">
+        <h1 class="text-5xl md:text-6xl font-extrabold mb-4">Vendor Bid</h1>
+        <p class="text-xl md:text-2xl mb-8">Streamline Procurement with Odoo 18’s Ultimate Vendor Management
+            Solution</p>
+        <a href="" target="_blank"
+           class="btn-gradient text-white px-8 py-4 rounded-full font-semibold text-lg">Get It on Odoo Apps Store</a>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="py-20 bg-white section">
+    <div class="container mx-auto px-6 text-center">
+        <h2 class="text-4xl font-bold mb-8 text-gray-800">About Vendor Bid</h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">Vendor Bid is a cutting-edge Odoo 18 module designed to
+            revolutionize supply chain management. From secure email verification and supplier registration to RFP
+            creation, quotation management, and advanced analytics, it empowers businesses with seamless, data-driven
+            procurement workflows.</p>
+    </div>
+</section>
+
+<!-- Dashboard Section -->
+<section id="dashboard" class="py-20 bg-gray-100 section">
+    <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">Explore Vendor Bid Features</h2>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
+            <div class="dashboard-card p-8 text-center" data-section="email-verification">
+                <svg class="w-12 h-12 mx-auto mb-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                </svg>
+                <h3 class="text-xl font-semibold mb-2 text-gray-800">Email Verification</h3>
+                <p class="text-gray-600">Secure OTP-based email validation.</p>
+            </div>
+            <div class="dashboard-card p-8 text-center" data-section="registration-form">
+                <svg class="w-12 h-12 mx-auto mb-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+                </svg>
+                <h3 class="text-xl font-semibold mb-2 text-gray-800">Registration Form</h3>
+                <p class="text-gray-600">Comprehensive vendor onboarding.</p>
+            </div>
+            <div class="dashboard-card p-8 text-center" data-section="two-step-verification">
+                <svg class="w-12 h-12 mx-auto mb-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+                <h3 class="text-xl font-semibold mb-2 text-gray-800">Two-Step Verification</h3>
+                <p class="text-gray-600">Robust approval process.</p>
+            </div>
+            <div class="dashboard-card p-8 text-center" data-section="rfp-creation">
+                <svg class="w-12 h-12 mx-auto mb-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M17 14v6m-3-3h6M6 10h2a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v2a2 2 0 002 2zm10 0h2a2 2 0 002-2V6a2 2 0 00-2-2h-2a2 2 0 00-2 2v2a2 2 0 002 2zM6 20h2a2 2 0 002-2v-2a2 2 0 00-2-2H6a2 2 0 00-2 2v2a2 2 0 002 2z"/>
+                </svg>
+                <h3 class="text-xl font-semibold mb-2 text-gray-800">RFP Creation</h3>
+                <p class="text-gray-600">Streamlined RFP and quotation management.</p>
+            </div>
+
+            <div class="dashboard-card p-8 text-center" data-section="rfp-publish">
+                <svg class="w-12 h-12 mx-auto mb-4 text-blue-600" fill="none" stroke="currentColor"
+                     viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M12 4v6m0 0l-3 3m3-3l3 3m-9 3h12a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                </svg>
+                <h3 class="text-xl font-semibold mb-2 text-gray-800">RFP Publish</h3>
+                <p class="text-gray-600">RFP publish in portal</p>
+            </div>
+            <div class="dashboard-card p-8 text-center" data-section="data-approval-process">
+                <svg class="w-12 h-12 mx-auto mb-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M10 14l2 2 4-4m5-5l-3 3m-6-6l3 3M5 19h14"/>
+                </svg>
+                <h3 class="text-xl font-semibold mb-2 text-gray-800">Approval Process</h3>
+                <p class="text-gray-600">Total approval process From creating RFP to publishing and supplier Biding to bid approve.</p>
+            </div>
+            <div class="dashboard-card p-8 text-center" data-section="rfp-report">
+                <svg class="w-12 h-12 mx-auto mb-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                </svg>
+                <h3 class="text-xl font-semibold mb-2 text-gray-800">RFP Report</h3>
+                <p class="text-gray-600">Detailed Excel and HTML reports.</p>
+            </div>
+            <div class="dashboard-card p-8 text-center" data-section="rfp-dashboard">
+                <svg class="w-12 h-12 mx-auto mb-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+                </svg>
+                <h3 class="text-xl font-semibold mb-2 text-gray-800">RFP Dashboard</h3>
+                <p class="text-gray-600">Metrics and charts for RFPs.</p>
+            </div>
+        </div>
+        <div id="dashboard-content">
+            <div id="email-verification" class="dashboard-content active bg-white p-8 rounded-lg shadow-lg">
+                <h3 class="text-3xl font-bold mb-4 text-gray-800">Email Verification with OTP</h3>
+                <p class="text-lg text-gray-600 mb-6">Securely validate vendor email addresses with OTP-based
+                    verification. Only new, non-blacklisted emails are accepted, ensuring a trusted supplier base.</p>
+                <ul class="list-disc list-inside text-gray-600">
+                    <li>Validates email uniqueness and blacklist status</li>
+                    <li>Sends OTP to valid emails for verification</li>
+                    <li>Navigates to registration form upon successful OTP</li>
+                </ul>
+            </div>
+            <div id="registration-form" class="dashboard-content bg-white p-8 rounded-lg shadow-lg">
+                <h3 class="text-3xl font-bold mb-4 text-gray-800">Comprehensive Registration Form</h3>
+                <p class="text-lg text-gray-600 mb-6">A robust, five-section form for vendor onboarding, covering
+                    company details, financials, client references, certifications, and document submissions, with
+                    strict validation.</p>
+                <ul class="list-disc list-inside text-gray-600">
+                    <li>Company info, contacts, and validated trade/TIN numbers</li>
+                    <li>Financial details with bank account validation</li>
+                    <li>Dynamic client references (up to 5)</li>
+                    <li>Non-expired certifications and document uploads (≤1MB)</li>
+                    <li>Automatic validation with user-friendly error messages</li>
+                </ul>
+            </div>
+            <div id="two-step-verification" class="dashboard-content bg-white p-8 rounded-lg shadow-lg">
+                <h3 class="text-3xl font-bold mb-4 text-gray-800">Two-Step Verification Process</h3>
+                <p class="text-lg text-gray-600 mb-6">A secure approval workflow with initial review and final approval,
+                    ensuring only qualified vendors are onboarded with automated account creation.</p>
+                <ul class="list-disc list-inside text-gray-600">
+                    <li>Reviewers approve, reject, or blacklist with comments</li>
+                    <li>Approvers finalize decisions, creating vendor records</li>
+                    <li>Email notifications with login credentials for suppliers</li>
+                    <li>Supports list, form, Kanban, and search views</li>
+                </ul>
+            </div>
+            <div id="rfp-creation" class="dashboard-content bg-white p-8 rounded-lg shadow-lg">
+                <h3 class="text-3xl font-bold mb-4 text-gray-800">RFP Creation & Quotation Submission</h3>
+                <p class="text-lg text-gray-600 mb-6">Streamlined RFP creation by reviewers, with a supplier portal for
+                    quotation submission, RFQ generation, and reviewer scoring.</p>
+                <ul class="list-disc list-inside text-gray-600">
+                    <li>Reviewers create RFPs with list and form views</li>
+                    <li>Suppliers submit quotations via portal</li>
+                    <li>Automatic RFQ creation and reviewer notifications</li>
+                    <li>Scoring based on delivery, charges, and terms</li>
+                    <li>Workflows for draft, submitted, approved, and closed states</li>
+                </ul>
+            </div>
+            <div id="rfp-publish" class="dashboard-content bg-white p-8 rounded-lg shadow-lg">
+                <h3 class="text-3xl font-bold mb-4 text-gray-800">RFP Published</h3>
+                <p class="text-lg text-gray-600 mb-6">After the final approve the requested products are published in the portal with number of quantity and additional
+                    information.</p>
+                <ul class="list-disc list-inside text-gray-600">
+                    <li>Supplier can see the Rfp</li>
+                    <li>Suppliers submit quotations via portal</li>
+                    <li>Automatic RFQ creation and reviewer notifications</li>
+
+                </ul>
+            </div>
+            <div id="rfp-report" class="dashboard-content bg-white p-8 rounded-lg shadow-lg">
+                <h3 class="text-3xl font-bold mb-4 text-gray-800">RFP Reporting</h3>
+                <p class="text-lg text-gray-600 mb-6">Generate detailed Excel and HTML reports for RFPs, filtered by
+                    date range and supplier name, for comprehensive procurement insights.</p>
+                <ul class="list-disc list-inside text-gray-600">
+                    <li>Excel reports with customizable filters</li>
+                    <li>HTML previews for web-based reporting</li>
+                    <li>Includes supplier details, RFP status, and product lines</li>
+                </ul>
+            </div>
+            <div id="data-approval-process" class="dashboard-content bg-white p-8 rounded-lg shadow-lg">
+                <h3 class="text-3xl font-bold mb-4 text-gray-800">Approval Process</h3>
+                <p class="text-lg text-gray-600 mb-6">Total approval process From creating RFP to publishing and supplier Biding to bid approve.</p>
+                <h1 class="text-lg text-gray-600 mb-6">RFP</h1>
+                <ul class="list-disc list-inside text-gray-600">
+                    <li>Reviewer creates RFP then submit it</li>
+                    <li>Approver approved </li>
+                    <li>RFP post in portal</li>
+                </ul>
+                <br>
+                <p class="text-lg text-gray-600 mb-6">After RFP post in portal All the registered supplier will get email. Then they can bid the product which are in the RFP.
+                    And then submit. A supplier can submit more than one bid.
+                    When The approver close the rfp time then RFQ approval process start.</p>
+                <h1 class="text-lg text-gray-600 mb-6">RFQ Approval Process</h1>
+                <ul class="list-disc list-inside text-gray-600">
+                    <li>Reviewer recommends and gives a score 1-10 to all the recommended.</li>
+                    <li>Recommended RFQ goes to the approver</li>
+                    <li>Approver approves one rfq. He can not approve more than one RFQ for one RFP.</li>
+                    <li>Autometically creates a new purchase order for </li>
+                </ul>
+            </div>
+            <div id="rfp-dashboard" class="dashboard-content bg-white p-8 rounded-lg shadow-lg">
+                <h3 class="text-3xl font-bold mb-4 text-gray-800">RFP Dashboard</h3>
+                <p class="text-lg text-gray-600 mb-6">A dynamic dashboard with graphs and charts showcasing approved
+                    RFQs, total amounts, and product-wise breakdowns.</p>
+                <ul class="list-disc list-inside text-gray-600">
+                    <li>Metrics for approved RFQs and total amounts</li>
+                    <li>Product-wise breakdown charts</li>
+                    <li>Real-time data visualization</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section id="features" class="py-20 bg-white section">
+    <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">Key Features</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-gray-50 p-8 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold mb-2 text-gray-800">Secure Onboarding</h3>
+                <p class="text-gray-600">Email verification and comprehensive registration with validation.</p>
+            </div>
+            <div class="bg-gray-50 p-8 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold mb-2 text-gray-800">RFP Management</h3>
+                <p class="text-gray-600">Create, publish, and evaluate RFPs with supplier quotations.</p>
+            </div>
+            <div class="bg-gray-50 p-8 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold mb-2 text-gray-800">Advanced Analytics</h3>
+                <p class="text-gray-600">Reports, visualizations, and dashboards for procurement insights.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="workflow" class="py-20 bg-white section">
+    <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">See the Workflow in Action</h2>
+        <div class="w-full">
+            <img src="images/workflow.gif" alt="Vendor Portal Workflow" class="w-full shadow-lg rounded-lg">
+        </div>
+    </div>
+</section>
+
+
+<!-- Screenshots Section -->
+<section id="screenshots" class="py-20 bg-gray-100 section">
+    <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">See It in Action</h2>
+        <div class="relative">
+            <div id="screenshot-carousel">
+                <div class="carousel-item active">
+                    <p class="text-lg text-gray-600 mb-6 text-center">This is Input email page, Where supplier put his email. And an OTP wil be sent to the mail.</p>
+                    <img src="images/login_email.png" alt="Vendor Portal" class="screenshot-img mx-auto">
+                </div>
+                <div class="carousel-item">
+                    <p class="text-lg text-gray-600 mb-6 text-center">This is the OTP page where user suppler input the otp.</p>
+                    <img src="images/otp.png" alt="Bid Dashboard" class="screenshot-img mx-auto">
+                </div>
+                <div class="carousel-item">
+                    <p class="text-lg text-gray-600 mb-6 text-center">Supplier Registration Form part 1</p>
+                    <img src="images/supplier_registration.png" alt="Bid Dashboard" class="screenshot-img mx-auto">
+                </div>
+                <div class="carousel-item">
+                    <p class="text-lg text-gray-600 mb-6 text-center">Supplier Registration Form part 2</p>
+                    <img src="images/supplier_registration2.png" alt="Bid Dashboard" class="screenshot-img mx-auto">
+                </div>
+                <div class="carousel-item">
+                    <p class="text-lg text-gray-600 mb-6 text-center">Supplier Registration Form part 3</p>
+                    <img src="images/supplier_registration3.png" alt="Bid Dashboard" class="screenshot-img mx-auto">
+                </div>
+                <div class="carousel-item">
+                    <p class="text-lg text-gray-600 mb-6 text-center">Supplier Registration Form part 4</p>
+                    <img src="images/supplier_registration4.png" alt="Bid Dashboard" class="screenshot-img mx-auto">
+                </div>
+                <div class="carousel-item">
+                    <p class="text-lg text-gray-600 mb-6 text-center">Supplier Registration Form part 5</p>
+                    <img src="images/supplier_registration5.png" alt="Bid Dashboard" class="screenshot-img mx-auto">
+                </div>
+                <div class="carousel-item">
+                    <p class="text-lg text-gray-600 mb-6 text-center">In this page The user wil see all the submitted Supplier Request</p>
+                    <img src="images/reviewer_registration_list_view.png" alt="Bid Dashboard" class="screenshot-img mx-auto">
+                </div>
+                <div class="carousel-item">
+                    <p class="text-lg text-gray-600 mb-6 text-center">In this view Reviewer can see all the details of the requested suppler. And using the action button can approve, reject or Blacklist the Email.</p>
+                    <img src="images/reviewer_registration_form_view.png" alt="Bid Dashboard" class="screenshot-img mx-auto">
+                </div>
+                <div class="carousel-item">
+                    <p class="text-lg text-gray-600 mb-6 text-center">In this view Approver can see all the approved supplier request by the Reviewer.</p>
+                    <img src="images/approver_registration_list_view.png" alt="Bid Dashboard" class="screenshot-img mx-auto">
+                </div>
+                <div class="carousel-item">
+                    <p class="text-lg text-gray-600 mb-6 text-center">In this view Approver can see all the details of the approved requested suppler. And using the action button He can finalize the Supplier Request.</p>
+                    <img src="images/approver_registration_form_view.png" alt="Bid Dashboard" class="screenshot-img mx-auto">
+                </div>
+                <div class="carousel-item">
+                    <p class="text-lg text-gray-600 mb-6 text-center">Reviewer Creating RFP</p>
+                    <img src="images/creating_rfp.png" alt="Bid Dashboard" class="screenshot-img mx-auto">
+                </div>
+                <div class="carousel-item">
+                    <p class="text-lg text-gray-600 mb-6 text-center">Requester Creating RFP, These are the users who are company employee who dont have the Full reviewer
+                    access. but sometimes need to request for product.</p>
+                    <img src="images/request_rfp.png" alt="Bid Dashboard" class="screenshot-img mx-auto">
+                </div>
+                <div class="carousel-item">
+                    <p class="text-lg text-gray-600 mb-6 text-center">Here are the list of the requested Rfp</p>
+                    <img src="images/requester_rfp_list.png" alt="Bid Dashboard" class="screenshot-img mx-auto">
+                </div>
+                <div class="carousel-item">
+                    <p class="text-lg text-gray-600 mb-6 text-center">Approver can see all the Requested RFP</p>
+                    <img src="images/rfp_approver_list_view.png" alt="Bid Dashboard" class="screenshot-img mx-auto">
+                </div>
+                <div class="carousel-item">
+                    <p class="text-lg text-gray-600 mb-6 text-center">Approver can Accept the RFP and publish it in the portal</p>
+                    <img src="images/rfp_approver_form_view.png" alt="Bid Dashboard" class="screenshot-img mx-auto">
+                </div>
+                <div class="carousel-item">
+                    <p class="text-lg text-gray-600 mb-6 text-center">Supplier can see all the published RFP in the portal.</p>
+                    <img src="images/published_rfp_portal.png" alt="Bid Dashboard" class="screenshot-img mx-auto">
+                </div>
+                <div class="carousel-item">
+                    <p class="text-lg text-gray-600 mb-6 text-center">Here the suppliers can Bid his price for the product.</p>
+                    <img src="images/bid_rfp_portal.png" alt="Bid Dashboard" class="screenshot-img mx-auto">
+                </div>
+                <div class="carousel-item">
+                    <p class="text-lg text-gray-600 mb-6 text-center">Reviewer can see all the RFQ posted for the RFP. and can give a score and recommend the rfq for the next process.
+                        Also There is a system generated score which will help the reviewer to take a decision.</p>
+                    <img src="images/reviewer_recommand_rfq.png" alt="Bid Dashboard" class="screenshot-img mx-auto">
+                </div>
+                <div class="carousel-item">
+                    <p class="text-lg text-gray-600 mb-6 text-center">In this image Approver can accept the rfq for the rfp. Approver can only accept one Rfq for one RFP.
+                    Here only recommended RFQ will be shown here. If approver accepts then an automatic PO will be created for the products.</p>
+                    <img src="images/approver_accept_rfq.png" alt="Bid Dashboard" class="screenshot-img mx-auto">
+                </div>
+                <div class="carousel-item">
+                    <p class="text-lg text-gray-600 mb-6 text-center">Accepted Purchase Oder</p>
+                    <img src="images/accepted_PO.png" alt="Bid Dashboard" class="screenshot-img mx-auto">
+                </div>
+                <div class="carousel-item">
+                    <p class="text-lg text-gray-600 mb-6 text-center">Here user can see the report of specific supplier and can also download the exel sheet</p>
+                    <img src="images/supplier_report.png" alt="Bid Dashboard" class="screenshot-img mx-auto">
+                </div>
+                <div class="carousel-item">
+                    <p class="text-lg text-gray-600 mb-6 text-center">Html report of the supplier</p>
+                    <img src="images/supplier_report_html.png" alt="Bid Dashboard" class="screenshot-img mx-auto">
+                </div>
+
+                <div class="carousel-item">
+                    <p class="text-lg text-gray-600 mb-6 text-center">Here supplier can edit their profile. They cant directly edit the profile. They will create
+                    an edit request with the edited information then wait for the approval.</p>
+                    <img src="images/supplier_edit_profile.png" alt="Bid Dashboard" class="screenshot-img mx-auto">
+                </div>
+                <div class="carousel-item">
+                    <p class="text-lg text-gray-600 mb-6 text-center">This is Dashboard where You can select any supplier and a time range. Then u can see all the details of the
+                    suppliers in a graphical views.</p>
+                    <img src="images/supplier_dashboard.png" alt="Bid Dashboard" class="screenshot-img mx-auto">
+                </div>
+            </div>
+            <button id="prev-screenshot"
+                    class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-blue-600 text-white p-3 rounded-full hover:bg-blue-700">
+                ←
+            </button>
+            <button id="next-screenshot"
+                    class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-blue-600 text-white p-3 rounded-full hover:bg-blue-700">
+                →
+            </button>
+            <div class="flex justify-center">
+                <a href="https://drive.google.com/file/d/1ypMGmWZgqPTjoa7CYiOJ0FYsiTsONcVv/view?usp=sharing"
+                   target="_blank"
+                   class="btn-gradient text-white px-6 py-3 mt-10 rounded-full font-semibold">
+                    Learn more about VendorBid (Technical Documentation)
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Future Improvements Section -->
+<!--<section id="future-improvements" class="py-20 future-improvements section">-->
+<!--    <div class="container mx-auto px-6 text-center">-->
+<!--        <h2 class="text-4xl font-bold mb-8">What’s Next for Vendor Bid</h2>-->
+<!--        <p class="text-lg mb-8 max-w-3xl mx-auto">We’re committed to enhancing Vendor Bid with exciting updates,-->
+<!--            including dynamic client additions, user-friendly error messages, smart buttons for registration metrics,-->
+<!--            and advanced RFP features like tax options and profile editing.</p>-->
+<!--        <a href="#contact" class="btn-gradient text-white px-8 py-4 rounded-full font-semibold text-lg">Stay Updated</a>-->
+<!--    </div>-->
+<!--</section>-->
+
+<!-- Pricing Section -->
+<!--<section id="pricing" class="py-20 bg-white section">-->
+<!--    <div class="container mx-auto px-6">-->
+<!--        <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">Pricing</h2>-->
+<!--        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">-->
+<!--            <div class="bg-gray-50 p-8 rounded-lg shadow-md text-center">-->
+<!--                <h3 class="text-2xl font-semibold mb-4 text-gray-800">Free Version</h3>-->
+<!--                <p class="text-gray-600 mb-4">Core features for small businesses.</p>-->
+<!--                <p class="text-3xl font-bold mb-6 text-blue-600">$0</p>-->
+<!--                <a href="https://apps.odoo.com" target="_blank"-->
+<!--                   class="btn-gradient text-white px-6 py-3 rounded-full font-semibold">Download Free</a>-->
+<!--            </div>-->
+<!--            <div class="bg-gray-50 p-8 rounded-lg shadow-md text-center">-->
+<!--                <h3 class="text-2xl font-semibold mb-4 text-gray-800">Premium Version</h3>-->
+<!--                <p class="text-gray-600 mb-4">Advanced features and priority support.</p>-->
+<!--                <p class="text-3xl font-bold mb-6 text-blue-600">Contact Us</p>-->
+<!--                <a href="#contact" class="btn-gradient text-white px-6 py-3 rounded-full font-semibold">Get a Quote</a>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</section>-->
+
+<!-- Installation Section -->
+<section id="installation" class="py-20 bg-white section">
+    <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">How to Install</h2>
+        <ol class="list-decimal max-w-2xl mx-auto text-lg text-gray-600">
+            <li class="mb-4">Visit the <a href="https://apps.odoo.com" target="_blank"
+                                          class="text-blue-600 hover:underline">Odoo Apps Store</a> and search for
+                "Vendor Bid".
+            </li>
+            <li class="mb-4">Click "Install" to add the module to your Odoo 18 instance.</li>
+            <li class="mb-4">Configure settings via the Odoo Apps menu.</li>
+            <li class="mb-4">Configure Outgoing Email server if not configured.</li>
+            <li>Start managing vendors and RFPs effortlessly!</li>
+        </ol>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="py-20 bg-blue-600 text-white section">
+    <div class="container mx-auto px-6 text-center">
+        <h2 class="text-4xl font-bold mb-8">Get in Touch</h2>
+        <p class="text-xl mb-8">Have questions or need support? Our team is here to help!</p>
+        <a href="mailto:support@yourwebsite.com"
+           class="btn-gradient text-white px-8 py-4 rounded-full font-semibold text-lg">Contact Support</a>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-12">
+    <div class="container mx-auto px-6 text-center">
+        <p class="text-lg mb-4">© 2025 Vendor Bid. All rights reserved.</p>
+        <div class="flex justify-center space-x-6 mb-4">
+            <a href="https://twitter.com/yourwebsite" class="social-icon">
+                <svg class="w-6 h-6 text-blue-300" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/>
+                </svg>
+            </a>
+            <a href="https://linkedin.com/company/yourwebsite" class="social-icon">
+                <svg class="w-6 h-6 text-blue-300" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/>
+                    <circle cx="4" cy="4" r="2"/>
+                </svg>
+            </a>
+        </div>
+        <p><a href="https://yourwebsite.com" class="text-blue-300 hover:underline">Visit Our Website</a> | <a
+                href="#privacy" class="text-blue-300 hover:underline">Privacy Policy</a></p>
+    </div>
+</footer>
+
+<!-- JavaScript for Dynamic Dashboard and Carousel -->
+<script>
+    // Dashboard Functionality
+    const dashboardCards = document.querySelectorAll('.dashboard-card');
+    const dashboardContents = document.querySelectorAll('.dashboard-content');
+
+    dashboardCards.forEach(card => {
+        card.addEventListener('click', () => {
+            dashboardContents.forEach(content => content.classList.remove('active'));
+            dashboardCards.forEach(c => c.classList.remove('bg-blue-100'));
+            const sectionId = card.getAttribute('data-section');
+            document.getElementById(sectionId).classList.add('active');
+            card.classList.add('bg-blue-100');
+        });
+    });
+
+    // Screenshot Carousel
+    const carouselItems = document.querySelectorAll('.carousel-item');
+    const prevButton = document.getElementById('prev-screenshot');
+    const nextButton = document.getElementById('next-screenshot');
+    let currentItem = 0;
+
+    function showItem(index) {
+        carouselItems.forEach((item, i) => {
+            item.classList.toggle('active', i === index);
+        });
+    }
+
+    function nextItem() {
+        currentItem = (currentItem + 1) % carouselItems.length;
+        showItem(currentItem);
+    }
+
+    function prevItem() {
+        currentItem = (currentItem - 1 + carouselItems.length) % carouselItems.length;
+        showItem(currentItem);
+    }
+
+    nextButton.addEventListener('click', nextItem);
+    prevButton.addEventListener('click', prevItem);
+<!--    setInterval(nextItem, 5000);-->
+
+    // Scroll Animations
+    const sections = document.querySelectorAll('.section');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    sections.forEach(section => observer.observe(section));
+</script>
+</body>
+</html>

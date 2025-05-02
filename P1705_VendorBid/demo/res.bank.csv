@@ -1,0 +1,11 @@
+id,name,swift_code,iban
+bank_1,HSBC,HSBCBDDH,IBAN0000000001
+bank_2,Dutch Bangla Bank Limited,DBBLBDH,IBAN0000000002
+bank_3,Standard Chartered Bank,SCBLBDH,IBAN0000000003
+bank_4,Eastern Bank Limited,EBLBDH,IBAN0000000004
+bank_5,Brac Bank Limited,BRACBDH,IBAN0000000005
+bank_6,United Commercial Bank Limited,UCBLBDH,IBAN0000000006
+bank_7,One Bank Limited,OBLBDH,IBAN0000000007
+bank_8,Prime Bank Limited,PRBLBDH,IBAN0000000008
+bank_9,Trust Bank Limited,TBLBDH,IBAN0000000009
+bank_10,Shahjalal Islami Bank Limited,SJIBBDH,IBAN0000000010

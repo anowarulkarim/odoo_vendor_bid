@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="ir_sequence_rfp_number" model="ir.sequence">
+        <field name="name">RFP Number</field>
+        <field name="code">supplies.rfp.number</field>
+        <field name="prefix">RFP</field>
+        <field name="padding">4</field>
+    </record>
+</odoo>

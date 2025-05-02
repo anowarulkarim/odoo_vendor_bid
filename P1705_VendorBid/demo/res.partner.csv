@@ -1,0 +1,37 @@
+id,name,parent_id:id,phone,email,street,function
+contact_1,Azharul Islam,supplier_1,01700000000,azhar1998@gmail.com,Dhaka,Primary Contact
+contact_2,Shahinur Rahman,supplier_1,01700001234,sh12323@gmail.com,Dhaka,Authorized Contact
+contact_3,Pavel,supplier_1,0134234234,pavelch22@gmail.com,Dhaka,Finance Contact
+contact_4,Rahim Khan,supplier_2,01812345678,rahimk@gmail.com,Dhaka,Primary Contact
+contact_5,Farhana Akter,supplier_2,01987654321,farhanaa@yahoo.com,Dhaka,Authorized Contact
+contact_6,Karim Ahmed,supplier_2,01555555555,karim.a@outlook.com,Dhaka,Finance Contact
+contact_7,Sadia Islam,supplier_3,01711111111,sadia.islam@gmail.com,Dhaka,Primary Contact
+contact_8,Tanvir Hasan,supplier_3,01622222222,tanvir.h@hotmail.com,Dhaka,Authorized Contact
+contact_9,Mehedi Hasan,supplier_3,01333333333,mehedi.h@gmail.com,Dhaka,Finance Contact
+contact_10,Anika Rahman,supplier_4,01844444444,anika.r@gmail.com,Dhaka,Primary Contact
+contact_11,Sajid Ali,supplier_4,01955555555,sajid.a@yahoo.com,Dhaka,Authorized Contact
+contact_12,Nusrat Jahan,supplier_4,01766666666,nusrat.j@gmail.com,Dhaka,Finance Contact
+contact_13,Arif Khan,supplier_5,01677777777,arif.k@outlook.com,Dhaka,Primary Contact
+contact_14,Sumaiya Akter,supplier_5,01588888888,sumaiya.a@gmail.com,Dhaka,Authorized Contact
+contact_15,Rafiqul Islam,supplier_5,01999999999,rafiq.i@yahoo.com,Dhaka,Finance Contact
+contact_16,Taimur Rahman,supplier_6,01712345678,taimur884@gmail.com,Dhaka,Primary Contact
+contact_17,Imran Hossain,supplier_6,01823456789,imran.h@hotmail.com,Dhaka,Authorized Contact
+contact_18,Fatema Begum,supplier_6,01634567890,fatema.b@gmail.com,Dhaka,Finance Contact
+contact_19,Shafiqul Islam,supplier_7,01945678901,shafiq.i@yahoo.com,Dhaka,Primary Contact
+contact_20,Nazma Akter,supplier_7,01756789012,nazma.a@gmail.com,Dhaka,Authorized Contact
+contact_21,Kamal Hossain,supplier_7,01567890123,kamal.h@outlook.com,Dhaka,Finance Contact
+contact_22,Shirin Sultana,supplier_8,01878901234,shirin.s@gmail.com,Dhaka,Primary Contact
+contact_23,Rashidul Hasan,supplier_8,01689012345,rashid.h@yahoo.com,Dhaka,Authorized Contact
+contact_24,Nasrin Akter,supplier_8,01990123456,nasrin.a@gmail.com,Dhaka,Finance Contact
+contact_25,Asif Iqbal,supplier_9,01701234567,asif.i@hotmail.com,Dhaka,Primary Contact
+contact_26,Sabrina Khan,supplier_9,01812345678,sabrina.k@gmail.com,Dhaka,Authorized Contact
+contact_27,Jahid Hasan,supplier_9,01623456789,jahid.h@yahoo.com,Dhaka,Finance Contact
+contact_28,Monirul Islam,supplier_10,01934567890,monirul.i@gmail.com,Dhaka,Primary Contact
+contact_29,Sharmin Akter,supplier_10,01745678901,sharmin.a@outlook.com,Dhaka,Authorized Contact
+contact_30,Rafiq Ahmed,supplier_10,01556789012,rafiq.a@yahoo.com,Dhaka,Finance Contact
+contact_31,Shahidul Islam,supplier_11,01867890123,shahidul.i@gmail.com,Dhaka,Primary Contact
+contact_32,Tania Akter,supplier_11,01678901234,tania.a@hotmail.com,Dhaka,Authorized Contact
+contact_33,Sohel Rana,supplier_11,01989012345,sohel.r@gmail.com,Dhaka,Finance Contact
+client_1,Gazi Group,supplier_3,01700000000,gazi.g@gmail.com,Dhaka,
+client_2,Abul Khair Group,supplier_3,01700001234,akhair@gmail.com,"Khilkhet, Dhaka",
+client_3,Partex Group,supplier_3,01700001234,pgroup@partex.com,"Mohakhali, Dhaka",
